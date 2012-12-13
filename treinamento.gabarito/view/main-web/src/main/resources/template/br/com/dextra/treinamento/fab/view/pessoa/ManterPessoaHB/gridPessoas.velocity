@@ -1,0 +1,32 @@
+#parse("messages.velocity")
+
+<action selector="#gridPessoas">
+
+	<table id="tblPessoas" class="dxResultTable dxPaginated">
+		<thead>
+			<tr>
+				<td>#bundle('pessoa.nome')</td>
+				<td>#bundle('pessoa.dataIngresso')</td>
+				<td>#bundle('pessoa.patente')</td>
+				<th class="actions">#bundle('aplicacao.rotulo.acoes')</th>
+			</tr>
+		</thead>
+		<tbody>
+			#foreach ($pessoa in ${page.pessoasCadastradas})
+				<tr>
+					<td>${pessoa.nome}</td>
+					<td>$dateFormat.format(${pessoa.dataIngresso})</td>
+					<td>${pessoa.patente.nome}</td>
+					<td class="actions">
+						<a href="#" hl:onclick="engine/pessoa/ManterPessoaHB/editar/${pessoa.id}.xml" class="edit">#bundle("aplicacao.acao.alterar")</a>
+						<a href="#" hl:onclick="engine/pessoa/ManterPessoaHB/excluir/${pessoa.id}.xml" class="remove">#bundle("aplicacao.acao.excluir")</a>
+					</td>
+				</tr>
+			#end
+		</tbody>
+	</table>
+
+</action>
+<script>
+	$("table#tblPessoas").dxPaginate(20);
+</script>

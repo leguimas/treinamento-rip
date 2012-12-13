@@ -1,0 +1,73 @@
+div.dxDropdownMenu {
+	height: 30px;
+	min-height: 30px;
+	height: auto;
+	width: 100%;
+	border-bottom: 2px solid #ccc;
+	padding: 0 5px;
+}
+div.dxDropdownMenu ul {
+	background: #999;
+	line-height: 30px;
+	padding: 0 6px;
+	height: 30px;
+	min-height: 30px;
+	height: auto;
+	float: left;
+}
+div.dxDropdownMenu ul li ul {
+	float: none;
+	line-height: auto;
+	padding: 0;
+	height: auto;
+	display: none;
+	background: #999;
+	width: 180px;
+	position: absolute;
+}
+div.dxDropdownMenu ul li {
+	cursor: pointer;
+	float: left;
+	padding: 0 10px 0 0;
+	width: 100px;
+	width: auto;
+	position: relative;
+}
+div.dxDropdownMenu ul li a {
+	color: #fff;
+	padding: 6px 6px 6px 16px;
+	z-index:10;
+}
+div.dxDropdownMenu ul li span.arrow {
+	color: #fff;
+	font-size: 15px;
+	position: absolute;
+	right: 10px;
+}
+div.dxDropdownMenu ul li ul {
+	left: 0px;
+	top: 30px;
+}
+div.dxDropdownMenu ul li ul li {
+	float: none;
+	display: block;
+	padding: 0;
+}
+div.dxDropdownMenu ul li ul li.odd {
+	background: #aaa;
+}
+div.dxDropdownMenu ul li ul li.hover {
+	background: #ccc;
+}
+div.dxDropdownMenu ul li ul li a {
+	text-decoration: none;
+	padding: 7px 10px;
+	display: block;
+}
+div.dxDropdownMenu ul li ul li ul {
+	top: 0px;
+	left: 180px;
+}
+div.dxDropdownMenu ul li ul li ul li {
+	position: static;
+}

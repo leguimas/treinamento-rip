@@ -1,0 +1,30 @@
+div.dxTabs ul.dxTabsList li {
+	float:left;
+}
+div.dxTabs ul.dxTabsList li a {
+	float:left;
+	color: #999;
+	padding: 0.5em 1em;
+	border: 1px solid #DDD;
+	background: #EFEFEF;
+	margin:0 5px -1px 0;
+	font-size: 14px;
+	line-height: 20px;
+}
+div.dxTabs ul.dxTabsList li.active a {
+	color: #333;
+	background-color:#FFF;
+	font-weight:bold;
+	border-bottom:1px solid #FFF;
+}
+div.dxTabs ul.dxTabsList li.active a:hover {
+	text-decoration: underline;
+}
+div.dxTabs div.dxTabContent {
+	border: 1px solid #ddd;
+	padding:1em;
+	min-height:500px;
+	height:auto !important;
+	height:700px;
+	clear:left;
+}

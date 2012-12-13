@@ -1,0 +1,76 @@
+ul.dxFeaturesMenu {
+	font-weight: normal;
+}
+
+div.dxContentMenu {
+	background: #EDEDED url(../../images/expansible-bg.png) 100% 0% repeat-y;
+	left:0;
+	top:0;
+	position:absolute;
+	margin: 0;
+	padding: 0 10px 0 0;
+	height: 100%;
+	display:block;
+	border:0;
+	height:300px;
+	width:180px;
+}
+div.dxCollapsedContentMenu  {
+width:50px;
+}
+div.dxTabContent div.dxContentMenu {
+	position: static;	
+	float:left;
+}
+
+div.dxContentMenu ul {
+	font-size: 13px;
+	padding:0;
+	margin:0 0 0 8px;
+}
+
+div.dxContentMenu ul li {
+	overflow: hidden;
+	height: 32px;
+	display: block;
+}
+
+div.dxContentMenu ul li a {
+	color: #333;
+	background: transparent none no-repeat 3px 6px;
+	padding:0 0 0 37px;
+	margin:0;
+}
+
+div.dxContentMenu ul li a:hover {
+	color: #999;
+}
+
+div.dxContentMenu div.close {
+	position: absolute;
+	right:15px;
+	top:5px;
+}
+
+div.dxCollapsedContentMenu div.close,
+div.dxContentMenu div.close {
+	margin:0;
+	padding:0;
+	height:8px;
+	width:4px;
+	display:block;
+	background: url(../../images/collapse-expand.gif) 100% 100% no-repeat;
+}
+
+div.dxContentMenu div.close input,
+div.dxCollapsedContentMenu div.close input {
+	display:none;
+}
+
+div.dxContentMenu ul li.start a {
+	background-image: url(../images/dextra/menu-home.png);
+}
+
+div.dxCollapsedContentMenu div.close  {
+	background: url(../../images/collapse-expand.gif) 0 0 no-repeat;
+}

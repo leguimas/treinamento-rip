@@ -1,0 +1,19 @@
+div.dxTooglePanel .dxTitle,
+div.dxTooglePanel h3 {
+	cursor: pointer;
+	padding: 5px 5px 5px 30px;
+	font-weight: bold;
+	font-size: 14px;
+	background: #427397 url(../../images/toogle-panel-collapse.gif) no-repeat 10px center;
+	color: #fff;
+	letter-spacing: -0.02em;
+}
+
+div.dxTooglePanel .dxContent {
+	padding: 8px;
+}
+
+div.dxTooglePanelCollapsed .dxTitle,
+div.dxTooglePanelCollapsed h3 {
+    background-image: url(../../images/toogle-panel-expand.gif);
+}

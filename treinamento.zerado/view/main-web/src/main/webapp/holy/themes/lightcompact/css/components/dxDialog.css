@@ -1,0 +1,43 @@
+.dxDialog {
+	border: 1px solid #999;
+	color: #333;
+	background: #fff;
+}
+
+.dxDialog .dxClose {
+	background: url(../../images/close.png) left top no-repeat;
+}
+
+.dxDialog h3 {
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.dxDialogOverlay {
+	background: #999;
+}
+
+.dxOverlay {
+	background: #699;
+}
+
+.dxErrorDialog h3 {
+	color: #900;
+	background: url(../../images/dxErrorDialog.gif) left center no-repeat;
+}
+
+.dxInfoDialog h3 {
+	color: #36c;
+	background: url(../../images/dxInfoDialog.gif) left center no-repeat;
+}
+
+.dxWarningDialog h3 {
+	color: #333;;
+	background: url(../../images/dxWarningDialog.gif) left center no-repeat;
+}
+
+.dxSuccessDialog h3 {
+	color: #18b000;
+	background: url(../../images/dxSuccessDialog.gif) left center no-repeat;
+}

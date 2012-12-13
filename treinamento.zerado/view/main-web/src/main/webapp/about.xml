@@ -1,0 +1,7 @@
+#macro(bundle $string)$bundle.get($string)#end
+<engine xmlns:hl="http://www.holyavenger.org/holyavenger/1.0">
+	<action selector="#content">
+		<h1>#bundle('aplicacao.sobre.titulo')</h1>
+		#bundle('aplicacao.sobre.texto')
+	</action>
+</engine>

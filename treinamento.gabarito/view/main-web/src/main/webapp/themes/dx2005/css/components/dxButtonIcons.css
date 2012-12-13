@@ -1,0 +1,114 @@
+.dxButtonIcon,
+.dxButtonIcons {
+	margin: 0 0 0 0 !important;
+	padding: 5px;
+	width: 22px !important;
+	height: 22px;
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-position: center center;
+	line-height: normal;
+	cursor: pointer;
+	border: none;
+}
+
+.dxButtonIcon[disabled],.dxButtonIconDisabled,.dxButtonIconHover,
+.dxButtonIcons[disabled],.dxButtonIconsDisabled,.dxButtonIconsHover {
+	opacity: 0.5;
+}
+
+.dxButtonIconAdd {
+	background-image: url(../../images/icons/dxIconAdd.png);
+}
+
+.dxButtonIconBack {
+	background-image: url(../../images/icons/dxIconBack.png);
+}
+
+.dxButtonIconCancel,.dxButtonIconNo {
+	background-image: url(../../images/icons/dxIconCancel.png);
+}
+
+.dxButtonIconClose {
+	background-image: url(../../images/icons/dxIconClose.png);
+}
+
+.dxButtonIconDownload {
+	background-image: url(../../images/icons/dxIconDownload.png);
+}
+
+.dxButtonIconEdit {
+	background-image: url(../../images/icons/dxIconEdit.png);
+}
+
+.dxButtonIconFilter {
+	background-image: url(../../images/icons/dxIconFilter.png);
+}
+
+.dxButtonIconForward {
+	background-image: url(../../images/icons/dxIconForward.png);
+}
+
+.dxButtonIconLogin {
+	background-image: url(../../images/icons/dxIconLogin.png);
+}
+
+.dxButtonIconMultiple {
+	background-image: url(../../images/icons/dxIconMultiple.png);
+}
+
+.dxButtonIconPreSave {
+	background-image: url(../../images/icons/dxIconPreSave.png);
+}
+
+.dxButtonIconRemove {
+	background-image: url(../../images/icons/dxIconRemove.png);
+}
+
+.dxButtonIconRename {
+	background-image: url(../../images/icons/dxIconRename.png);
+}
+
+.dxButtonIconReport {
+	background-image: url(../../images/icons/dxIconReport.png);
+}
+
+.dxButtonIconReset {
+	background-image: url(../../images/icons/dxIconReset.png);
+}
+
+.dxButtonIconSave {
+	background-image: url(../../images/icons/dxIconSave.png);
+}
+
+.dxButtonIconSchedule {
+	background-image: url(../../images/icons/dxIconSchedule.png);
+}
+
+.dxButtonIconSearch {
+	background-image: url(../../images/icons/dxIconSearch.png);
+}
+
+.dxButtonIconSelect {
+	background-image: url(../../images/icons/dxIconSelect.png);
+}
+
+.dxButtonIconUpload {
+	background-image: url(../../images/icons/dxIconUpload.png);
+}
+
+.dxButtonIconView,.dxButtonIconPreview {
+	background-image: url(../../images/icons/dxIconView.png);
+}
+
+.dxButtonIconYes,.dxButtonIconConfirm {
+	background-image: url(../../images/icons/dxIconYes.png);
+}
+
+.dxButtonIconIncr {
+    background-image: url(../../images/icons/asc.png);
+}
+
+.dxButtonIconDecr {
+    background-image: url(../../images/icons/desc.png);
+}

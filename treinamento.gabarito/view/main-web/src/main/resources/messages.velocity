@@ -1,0 +1,5 @@
+<action selector="#messageBoard">
+	#foreach ($message in $messages)
+		<li class="${message.severity}">${message.text}</li>
+	#end
+</action>

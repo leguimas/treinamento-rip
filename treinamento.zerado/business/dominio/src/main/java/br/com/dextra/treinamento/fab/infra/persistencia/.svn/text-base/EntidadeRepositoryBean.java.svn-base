@@ -1,0 +1,53 @@
+package br.com.dextra.captus.persistencia;
+
+import java.util.List;
+
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+
+import org.jboss.ejb3.annotation.LocalBinding;
+import org.mycontainer.annotation.MycontainerLocalBinding;
+
+import br.com.dextra.captus.infra.utils.StringUtils;
+import br.com.dextra.captus.infra.validacao.ValidacaoException;
+
+@LocalBinding(jndiBinding = EntidadeRepository.JNDI_LOCAL)
+@MycontainerLocalBinding(value = EntidadeRepository.JNDI_LOCAL)
+@Stateless
+public class EntidadeRepositoryBean implements EntidadeRepository {
+
+	@PersistenceContext(unitName = "dextra-captus-pu")
+	protected EntityManager em;
+
+	@Override
+	public <T extends Entidade> T buscarPorId(Class<T> classe, Long id) {
+		return em.find(classe, id);
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public <T extends Entidade> List<T> buscarTodos(String entidade, String orderBy) {
+		StringBuilder sqlQuery = new StringBuilder();
+		sqlQuery.append(" FROM ").append(entidade);
+
+		if (StringUtils.isNotEmpty(orderBy)) {
+			sqlQuery.append(" ORDER BY ").append(orderBy);
+		}
+
+		Query query = em.createQuery(sqlQuery.toString());
+		return query.getResultList();
+	}
+
+	@Override
+	public <T extends Entidade> T salvar(T entidade) throws ValidacaoException {
+		entidade.validar();
+
+		entidade = em.merge(entidade);
+		em.persist(entidade);
+
+		return entidade;
+	}
+
+}

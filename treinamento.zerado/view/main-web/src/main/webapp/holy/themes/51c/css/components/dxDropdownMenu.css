@@ -1,0 +1,42 @@
+div.dxDropdownMenu {
+	border-bottom: 1px solid #515151;
+	position: relative;
+}
+
+	div.dxDropdownMenu ul {
+		background: #515151 url(../../images/default-bg.png) repeat top left;
+		padding: 0px;
+	}
+	
+		div.dxDropdownMenu ul li {
+			font-weight: normal;
+			font-size: 12px;
+			border-right: 1px solid #9cc;
+		}
+		
+		   div.dxDropdownMenu ul li span.firstLevelArrow {
+	            display: table-cell;
+	            height: 10px;
+	            width: 10px;
+	            text-indent: -9999px;
+	            background: transparent url(../../images/drop-menu-expand.gif) no-repeat scroll bottom;
+	        }
+		
+			div.dxDropdownMenu ul li ul {
+				background: #515151;
+				line-height: 14px;
+			}
+			
+				div.dxDropdownMenu ul li ul li {
+					font-weight: normal;
+					font-size: 11px;
+					background: #515151;
+				}
+				
+				div.dxDropdownMenu ul li ul li.odd {
+					background: #5a5a5a;
+				}
+				
+				div.dxDropdownMenu ul li ul li.hover {
+					background: #999;
+				}

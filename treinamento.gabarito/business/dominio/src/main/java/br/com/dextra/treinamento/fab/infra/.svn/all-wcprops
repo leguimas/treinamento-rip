@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/dextra_sepg/!svn/ver/1612/trunk/devel/captus/business/dominio/src/main/java/br/com/dextra/captus/infra
+END
+DatabaseManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/dextra_sepg/!svn/ver/1611/trunk/devel/captus/business/dominio/src/main/java/br/com/dextra/captus/infra/DatabaseManager.java
+END
+ServiceLocator.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/dextra_sepg/!svn/ver/1611/trunk/devel/captus/business/dominio/src/main/java/br/com/dextra/captus/infra/ServiceLocator.java
+END

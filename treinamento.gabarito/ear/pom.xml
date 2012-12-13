@@ -1,0 +1,104 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>br.com.dextra</groupId>
+		<artifactId>treinamento-fab</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<groupId>br.com.dextra.treinamento-fab</groupId>
+	<artifactId>ear</artifactId>
+	<packaging>ear</packaging>
+	<name>Dextra Treinamento - Pacote EAR</name>
+
+	<dependencies>
+		<dependency>
+			<groupId>br.com.dextra.treinamento-fab.view</groupId>
+			<artifactId>main-web</artifactId>
+			<type>war</type>
+		</dependency>
+		<dependency>
+			<groupId>br.com.dextra.treinamento-fab.business</groupId>
+			<artifactId>persistence-jpa</artifactId>
+			<type>ejb</type>
+			<exclusions>
+				<exclusion>
+					<groupId>br.com.jsigner</groupId>
+					<artifactId>jsigner-annotations</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.mycontainer</groupId>
+					<artifactId>mycontainer-annotations</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>br.com.dextra.treinamento-fab.business</groupId>
+			<artifactId>dominio</artifactId>
+			<type>ejb</type>
+			<exclusions>
+				<exclusion>
+					<groupId>br.com.jsigner</groupId>
+					<artifactId>jsigner-annotations</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.mycontainer</groupId>
+					<artifactId>mycontainer-annotations</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>treinamento-fab</finalName>
+		<plugins>
+			<plugin>
+				<artifactId>maven-ear-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+						</manifest>
+					</archive>
+					<displayName>Dextra Treinamento</displayName>
+					<description>Aplicacao de exemplo para treinamento EJB</description>
+					<version>5</version>
+					<defaultLibBundleDir>lib</defaultLibBundleDir>
+					<modules>
+						<webModule>
+							<groupId>br.com.dextra.treinamento-fab.view</groupId>
+							<artifactId>main-web</artifactId>
+							<contextRoot>/treinamento-fab</contextRoot>
+						</webModule>
+						<ejbModule>
+							<groupId>br.com.dextra.treinamento-fab.business</groupId>
+							<artifactId>dominio</artifactId>
+						</ejbModule>
+						<ejbModule>
+							<groupId>br.com.dextra.treinamento-fab.business</groupId>
+							<artifactId>persistence-jpa</artifactId>
+						</ejbModule>
+					</modules>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

@@ -1,0 +1,91 @@
+div.dxContentMenu {
+	overflow: hidden;
+	float: left;
+	width: 200px;
+	padding: 0 0 10px;
+	cursor: pointer;
+	left: 0;
+	height: auto;
+}
+
+div.dxMainContent {
+	margin-left: 200px;
+}
+
+div.dxContentMenu ul {
+	float: left;
+	padding: 0.5em 0 0 0.5em;
+}
+
+div.dxContentMenu ul li {
+	clear: left;
+	height: 32px;
+	line-height: 32px;
+}
+
+div.dxContentMenu ul li a {
+	display: block;
+	height: 32px;
+	overflow: hidden;
+	padding: 0;
+	padding-left: 36px;
+	background: transparent none no-repeat 3px 6px;
+}
+
+div.dxContentMenu ul li a:hover {
+}
+
+div.dxContentMenu ul li.folder ul {
+	display: none;
+}
+
+div.dxContentMenu ul li.openedFolder ul {
+	width: 100%;
+	font-size: 90%;
+	list-style: none;
+	display: block;
+	height: auto;
+}
+
+div.dxContentMenu div.close {
+	width: 12px;
+	overflow: hidden;
+	margin: 0 0 0 188px;
+	padding: 0;
+	border: none;
+}
+
+div.dxContentMenu div.close input {
+	cursor: pointer;
+	padding: 0;
+	border: 0;
+	font-size: 11px;
+	color: #888;
+	margin: 0;
+	width: 10px;
+}
+
+div.dxCollapsedContentMenu {
+	width: 60px;
+}
+
+div.dxCollapsedContentMenu ul {
+	overflow: hidden;
+	width: 36px;
+}
+
+div.dxCollapsedContentMenu ul li {
+	height: 32px;
+}
+
+div.dxCollapsedContentMenu ul li.openedFolder {
+    height: auto;
+}
+
+div.dxCollapsedContentMenu div.close { 
+	margin: 0 0 0 48px;
+}
+
+div#main div.dxExpandedContent {
+	margin-left: 60px;	
+}

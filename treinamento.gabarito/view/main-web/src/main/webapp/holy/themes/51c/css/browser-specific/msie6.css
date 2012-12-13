@@ -1,0 +1,37 @@
+div#wrap {
+	/* min-width and max-width fix */
+	width: expression(document.body.clientWidth < 762? "760px" : document.body.clientWidth > 1202? "1200px" : "auto");
+}
+div.dxContentMenu {
+	background-color:#EDEDED;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/expansible-bg.png', sizingMethod='crop');
+}
+ul.messages {
+	overflow:hidden;
+}
+ul.messages li {
+	display:block;
+	height:18px;
+}
+div#main div#content {
+	float:right;
+}
+div#main div.dxExpandedContent {
+	margin-left:30px;
+}
+div.dxMainContent {
+	margin-left:180px;
+}
+.holyLoading,
+.holyLoadingInternal {
+	position: absolute;
+}
+.holyLoading {
+ height: expression(document.body.offsetHeight)px;
+}
+.holyLoadingInternal {
+	top: 250px;
+}
+ul.dxAppMenu li a {
+	zoom: 1;
+}

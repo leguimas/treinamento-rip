@@ -1,0 +1,48 @@
+#macro(bundle $string)$bundle.get($string)#end
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:hl="http://www.holyavenger.org/holyavenger/1.0">
+	<head>
+		<title>#bundle('aplicacao.titulo')</title>
+		<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+		<link rel="shortcut icon" type="image/png" href="holy/themes/lightcompact/images/favicon.png"/>
+		<style type="text/css">
+			#wrap {
+				display: none;
+			}
+		</style>
+		<script type="text/javascript" src="holy/core/index.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="holy/components/index.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="themes/dx2005/index.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="css/index.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="js/index.js" charset="UTF-8"></script>
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="header">
+				<img src="images/logo.gif"/>
+				<h1>#bundle('aplicacao.titulo')</h1>
+			</div>
+			<div class="dxDropdownMenu">
+				<ul>
+					<li class="components"><a href="#" hl:onclick="engine/pessoa/ManterPessoaHB/iniciar.xml">  #bundle('menu.pessoa') </a></li>
+				</ul>
+			</div>
+			<ul id="messageBoard" class="messages">
+			</ul>
+			<div id="main">
+				<div id="content" class="dxMainContent">
+				</div>
+			</div>
+			<div id="footer">
+			</div>
+		</div>
+		<div id="dialogs">
+		</div>
+		<div id="hlLoad">
+		</div>
+		<script type="text/javascript">
+			Holyavenger.load.include(Holyavenger.load.scripts, 0);
+		</script>
+	</body>
+</html>

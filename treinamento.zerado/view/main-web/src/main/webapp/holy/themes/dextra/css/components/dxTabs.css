@@ -1,0 +1,18 @@
+div.dxTabs ul.dxTabsList li {
+	font-size: 14px;
+	line-height: 20px;
+}
+
+div.dxTabs ul.dxTabsList li.active {
+	border-bottom-color: #fff;
+	font-weight: bold;
+	background: #fff;
+}
+
+div.dxTabs ul.dxTabsList li a {
+	color: #999;
+}
+
+div.dxTabs ul.dxTabsList li.active a {
+	color: #333;
+}

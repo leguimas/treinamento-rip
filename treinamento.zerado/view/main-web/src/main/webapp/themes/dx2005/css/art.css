@@ -1,0 +1,250 @@
+* {
+	font-family: Tahoma, Verdana, Arial, Verdana, sans-serif;
+	color: #333;
+}
+body {
+	font-size: 11px;
+}
+a {
+	text-decoration: none;
+	color: #36c;
+}
+a:hover {
+	text-decoration: underline;
+}
+code {
+	font-family: monospace;
+}
+body {
+	background: #ccc;
+}
+div#wrap {
+	box-shadow: 0px 0px 10px #888;
+	-moz-box-shadow: 0px 0px 10px #888;
+	-webkit-box-shadow: 0px 0px 10px #888;
+}
+div#header {
+	background: url(../images/bg_hrtop.png) repeat-x bottom;
+}
+div#header a {
+	color: #fff;
+}
+div#header h1 {
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 34px;
+	letter-spacing: -2px;
+	color: #fff;
+	background: url(../images/livedemo-logo.png) no-repeat 0 0;
+	display: none;
+}
+div#header h1 em {
+	text-transform: uppercase;
+	color: #cdc;
+	border-left: 1px solid #eee;
+	font-size: 26px;
+}
+div#main {
+	border: none;
+}
+div#main div#content h1 {
+    font-size: 17px;
+    color: #555;
+	background: url(../images/bg_hn.png) repeat;
+	padding: 10px;
+	color: #fff;
+	margin: -10px -10px 10px;
+}
+
+div#main div#content h1 a {
+	color: #36c;
+}
+div#main div#content h2 {
+	font-size: 15px;
+	font-weight: bold;
+	color: #000;
+}
+div#main div#content em {
+	font-style: normal;
+	font-weight: bold;
+}
+ul.dxAppMenu {
+	font-weight: bold;
+	width:331px;
+	height:29px;
+	font-size: 12px;
+	background:url(../images/bg-header-login.png) left bottom no-repeat;
+}
+ul.dxFeaturesMenu {
+	margin-top: -30px;
+	text-align: right;
+}
+ul.dxFeaturesMenu li a {
+	color: #fff;
+	background: transparent none no-repeat top center;
+}
+ul.dxFeaturesMenu li a span {
+	color: #fff;
+	font-weight: bold;
+}
+ul.dxFeaturesMenu li.active a {
+}
+ul.userMenu li a,
+ul.dxAppMenu li a {
+	text-decoration: none;
+	font-weight: normal;
+	background: transparent none no-repeat left center;
+	color: #FFF;
+	padding: 4px 0 2px 18px;
+}
+ul.userMenu li a:hover,
+ul.dxAppMenu li a:hover {
+	text-decoration: underline;
+	color:#d0e1ff;
+}
+ul.userMenu li.logout a,
+ul.dxAppMenu li.logout a {
+	background-image: url(../images/logout.png);
+}
+ul.userMenu li.updateAccount a,
+ul.dxAppMenu li.updateAccount a {
+	background-image: url(../images/my-account.png);
+}
+ul.userMenu li.settings a,
+ul.dxAppMenu li.settings a {
+	background-image: url(../images/settings.png);
+}
+/* [jquery.tooltip] */
+.jqTooltip {
+	border: 1px solid #92B1FF;
+	color:#000;
+	background-color: #CCDAFF;
+	opacity: 0.85;
+	font-size: 12px;
+}
+.jqTooltip h3 {
+	color:#000;
+}
+/* [/jquery.tooltip] */ /* [customizing jquery ui components] */
+.ui-datepicker-title span {
+	color: #fff !important;
+}
+.ui-widget {
+	font-size: 12px !important;
+}
+/* [/customizing jquery ui components] */
+/* [holy loading] */
+.holyLoadingHide {
+	display: none;
+}
+.holyLoadingShow {
+	filter: alpha(opacity = 60);
+	opacity: 0.6;
+	background-color: #FFF;
+}
+.holyLoadingInternal {
+	border: 2px solid #92b1ff;
+	color: #000 !important;
+	background: #ccdaff url(../images/load_br.gif) no-repeat center 20px;
+}
+.holyLoadingInternal p {
+	color: #FFF;
+	font-size: 10px;
+	text-align: center;
+}
+.holyLoadingInternal p em {
+	color: #FFF;
+	font-size: 13px;
+	font-style: normal;
+}
+/* [holy loading] */ /* [login] */
+div#wrap.loginPage {
+	border: 2px solid #cacaca;
+	background:#FFF;
+}
+div#wrap.loginPage form fieldset ul li label {
+	text-align: left;
+}
+div#wrap.loginPage form fieldset ul li input {
+	font-size: 24px;
+}
+/* [/login] */
+i18n {
+	color: inherit
+}
+ul.dxViewData {
+	font-weight: normal;
+	line-height: 24px;
+}
+ul.dxViewData li dfn {
+	font-weight: 700;
+}
+div.contentMenu ul li a {
+	color: #fff;
+}
+div.contentMenu ul li.active a {
+	color: #fff;
+}
+ul.userMenu li a {
+	color: #ddd;
+}
+div.contentMenu ul li.active a {
+	color: #fff;
+}
+div.contentMenu ul li.active a .cM-active {
+	color: #fff;
+}
+ul li dfn {
+	font-weight: bold;
+}
+/* [svn version] */
+div.version-revision,
+div.version-revision a,
+div.version-revision a:link,
+div.version-revision a:visited,
+div.version-revision a:active,
+div.version-revision strong,
+div.version-revision span{
+	color: #427397 !important;
+}
+/* [tela sobre] */
+div.dxAbout {
+    background: #4F7A9F url(../images/about.png) no-repeat 0 0;
+}
+
+div.dxAbout h2 {
+    background: url("../images/livedemo-logo.png") no-repeat scroll 0 0 transparent;
+}
+
+div.dxAbout p.dxby span {
+    color: #ccc;
+}
+
+div.dxAbout ul.dxby a{
+    background: url("../images/logo_dextra.png") no-repeat scroll 0 0 transparent;
+}
+
+div.dxAbout ul.dxby a,
+div.dxAbout ul.dxby a:link,
+div.dxAbout ul.dxby a:visited {
+    color: #ccc;
+}
+
+div.dxAbout ul.dxby a span{
+	display: none;
+}
+
+
+
+.slogan {
+	border-left: 1px dotted #666;
+	color: #899;
+	display: block;
+	float: right;
+	font: normal normal bold 12px/normal Tahoma, Verdana, Arial;
+	height: 30px;
+	line-height: 120%;
+	margin: 7px 5px;
+	padding: 10px 0px 8px 14px;
+	width: 136px;
+}

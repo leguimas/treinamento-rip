@@ -1,0 +1,6 @@
+#macro(bundle $string)$bundle.get($string)#end
+<engine xmlns:hl="http://www.holyavenger.org/holyavenger/1.0">
+	<action selector="ul#messageBoard">
+		<li class='error'>#bundle('aplicacao.erroGeral')</li>
+	</action>
+</engine>

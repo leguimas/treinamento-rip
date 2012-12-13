@@ -1,0 +1,96 @@
+package br.com.dextra.treinamento.fab.infra.utils;
+
+import java.io.IOException;
+import java.util.Properties;
+
+public class StringUtils {
+
+	public static boolean isEmpty(String str) {
+		return str == null || str.trim().equals("");
+	}
+
+	public static boolean isNotEmpty(String str) {
+		return !isEmpty(str);
+	}
+
+	public static String firstCharToUppercase(String str) {
+		return str.substring(0, 1).toUpperCase() + str.subSequence(1, str.length());
+	}
+
+	/**
+	 * Acrescenta zeros a esquerda, se necessario
+	 */
+	public static String acrescentaZerosAEsquerda(String numero, int tamanho) {
+		int faltam = tamanho - numero.length();
+
+		String zeros = "";
+		for (int i = 0; i < faltam; i++) {
+			zeros += "0";
+		}
+
+		return zeros + numero.toString();
+	}
+
+	/**
+	 * Substitui caracteres acentuados pelo respectivo caracter se acentuacao
+	 *
+	 * @throws IOException
+	 */
+	public static String removeAcentuacao(String str) {
+
+		Properties stringUtilsProperties = new Properties();
+		try {
+			stringUtilsProperties
+					.load(StringUtils.class.getClassLoader().getResourceAsStream("stringUtils.properties"));
+
+			return str.replaceAll(stringUtilsProperties.get("acentosa").toString(), "a")
+					.replaceAll(stringUtilsProperties.get("acentose").toString(), "e")
+					.replaceAll(stringUtilsProperties.get("acentosi").toString(), "i")
+					.replaceAll(stringUtilsProperties.get("acentoso").toString(), "o")
+					.replaceAll(stringUtilsProperties.get("acentosu").toString(), "u")
+					.replaceAll(stringUtilsProperties.get("acentosA").toString(), "A")
+					.replaceAll(stringUtilsProperties.get("acentosE").toString(), "E")
+					.replaceAll(stringUtilsProperties.get("acentosI").toString(), "I")
+					.replaceAll(stringUtilsProperties.get("acentosO").toString(), "O")
+					.replaceAll(stringUtilsProperties.get("acentosU").toString(), "U")
+					.replace(stringUtilsProperties.get("acentoc").toString(), "c")
+					.replace(stringUtilsProperties.get("acentoC").toString(), "C")
+					.replace(stringUtilsProperties.get("acenton").toString(), "n")
+					.replace(stringUtilsProperties.get("acentoN").toString(), "N");
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+	}
+
+	/**
+	 * Remove os caracteres especiais que nao podem ser inseridos no sistema do
+	 * BOFA para integracao da Ordem de Pagamento
+	 *
+	 * @throws IOException
+	 */
+	public static String removeCaracteresEspeciaisEAcentuacaoBOFA(String str) {
+
+		Properties stringUtilsProperties = new Properties();
+		try {
+			stringUtilsProperties
+					.load(StringUtils.class.getClassLoader().getResourceAsStream("stringUtils.properties"));
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+
+		str = removeAcentuacao(str);
+		return str.replaceAll(stringUtilsProperties.get("especiais").toString(), "");
+	}
+
+	public static String truncate(String value, int length) {
+		if (value == null) {
+			return null;
+		}
+
+		if (value.length() <= length) {
+			return value;
+		} else {
+			return value.substring(0, length);
+		}
+	}
+}

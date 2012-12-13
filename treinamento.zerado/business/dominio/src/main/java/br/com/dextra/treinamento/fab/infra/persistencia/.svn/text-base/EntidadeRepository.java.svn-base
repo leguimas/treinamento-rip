@@ -1,0 +1,19 @@
+package br.com.dextra.captus.persistencia;
+
+import java.util.List;
+
+import javax.ejb.Local;
+
+import br.com.dextra.captus.infra.validacao.ValidacaoException;
+
+@Local
+public interface EntidadeRepository {
+
+	public static final String JNDI_LOCAL = "EntidadeRepository/local";
+
+	public <T extends Entidade> T buscarPorId(Class<T> classe, Long id);
+
+	public <T extends Entidade> T salvar(T entidade) throws ValidacaoException;
+
+	public <T extends Entidade> List<T> buscarTodos(String entidade, String orderBy);
+}

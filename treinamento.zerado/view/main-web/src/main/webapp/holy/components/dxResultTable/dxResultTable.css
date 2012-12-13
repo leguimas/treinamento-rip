@@ -1,0 +1,55 @@
+table.dxResultTable {
+	margin: 5px 0;
+	border: 1px solid #ccc;
+	width: 100%;
+}
+
+table.dxResultTable thead th {
+	vertical-align: top;
+	padding: 8px;
+	border-left: 1px solid #ccc;
+	text-align: left;
+}
+
+table.dxResultTable tbody td {
+	empty-cells: show;
+	padding: 5px;
+	border-left: 1px solid #eee;
+}
+
+table.dxResultTable tbody tr.odd td {
+	background: #efefef;
+}
+
+table.dxResultTable tbody tr.even td {
+	background: #fff;
+}
+
+table.dxResultTable th.dxSelect {
+	width: 10px;
+}
+
+table.dxPaginatedResultTable tbody tr {
+	display: none;
+}
+
+div.dxPaginationLinks {
+	text-align: center;
+}
+
+div.dxPaginationLinks a {
+	cursor: pointer;
+	color: #669999;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 0 8px;
+}
+
+div.dxPaginationLinks a.disabled {
+	color: #bbb;
+}
+
+div.dxPaginationLinks a.selected {
+	background: #699;
+	color: #fff;
+}

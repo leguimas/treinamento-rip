@@ -1,0 +1,102 @@
+package br.com.dextra.captus.infra.utils;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.nio.charset.Charset;
+import java.util.List;
+
+import au.com.bytecode.opencsv.CSVReader;
+
+
+public class CSVUtils {
+	
+	private final static Character SEPARADOR_PADRAO = ';';
+	
+	private final static Charset CHARSET_PADRAO = Charset.forName("ISO-8859-1");
+
+	
+	/**
+	 * Metodo responsavel por ler todas as linhas de um arquivo CSV
+	 * 
+	 * @param reader reader do arquivo
+	 * @param separador caracter separador das colunas de uma linha
+	 * 
+	 * @return lista das linhas lidas do arquivo CSV
+	 * @throws IOException exception ocorrida na leitura do arquivo CSV
+	 */
+	public static List<String[]> lerArquivoCSV(Reader reader, Character separador) throws IOException {
+		CSVReader csvReader = new CSVReader(reader, separador);
+		
+		return  csvReader.readAll();
+	}
+	
+	/**
+	 * Metodo responsavel por ler todas as linhas de um arquivo CSV
+	 * 
+	 * @param stream stream do arquivo
+	 * @param separador caracter separador das colunas de uma linha
+	 * 
+	 * @return lista das linhas lidas do arquivo CSV
+	 * @throws IOException exception ocorrida na leitura do arquivo CSV
+	 */
+	public static List<String[]> lerArquivoCSV(InputStream stream, Character separador) throws IOException {
+		InputStreamReader inputStreamReader = new InputStreamReader(stream, CHARSET_PADRAO);
+		
+		return  lerArquivoCSV(inputStreamReader, separador);
+	}
+	
+	/**
+	 * Metodo responsavel por ler todas as linhas de um arquivo CSV
+	 * 
+	 * @param stream stream do arquivo
+	 * @param separador caracter separador das colunas de uma linha
+	 * 
+	 * @return lista das linhas lidas do arquivo CSV
+	 * @throws IOException exception ocorrida na leitura do arquivo CSV
+	 */
+	public static List<String[]> lerArquivoCSV(InputStream stream) throws IOException {
+		return  lerArquivoCSV(stream, SEPARADOR_PADRAO);
+	}
+
+	/**
+	 * Metodo responsavel por ler todas as linhas de um arquivo CSV
+	 * 
+	 * @param pathArquivo path arquivo a ser processado
+	 * @param separador caracter separador das colunas de uma linha
+	 * 
+	 * @return lista das linhas lidas do arquivo CSV
+	 * @throws IOException exception ocorrida na leitura do arquivo CSV
+	 */
+	public static List<String[]> lerArquivoCSV(String pathArquivo, Character separador) throws IOException {
+		FileReader reader = new FileReader(pathArquivo);
+		
+		return  lerArquivoCSV(reader, separador);
+	}
+	
+	public static String adicionarAspas(String s) {
+		if (StringUtils.isEmpty(s)) {
+			return "";
+		} else {
+			return "\"" + StringUtils.removeCaracteresEspeciaisEAcentuacaoBOFA(s) + "\"";
+		}
+	}
+
+	public static String adicionarAspasComBarras(String s) {
+		if (StringUtils.isEmpty(s)) {
+			return "";
+		} else {
+			return "\"//" + StringUtils.removeCaracteresEspeciaisEAcentuacaoBOFA(s) + "\"";
+		}
+	}
+
+	public static String adicionarAspasComCodeWordBEN(String s) {
+		if (StringUtils.isEmpty(s)) {
+			return "";
+		} else {
+			return "\"/BEN/" + StringUtils.removeCaracteresEspeciaisEAcentuacaoBOFA(s) + "\"";
+		}
+	}
+}

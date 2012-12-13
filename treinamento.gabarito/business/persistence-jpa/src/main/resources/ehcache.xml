@@ -1,0 +1,21 @@
+<ehcache>
+    <diskStore path="java.io.tmpdir"/>
+
+    <defaultCache
+        maxElementsInMemory="10000"
+        eternal="false"
+        timeToIdleSeconds="0"
+        timeToLiveSeconds="0"
+        overflowToDisk="false"
+        diskPersistent="false"
+        diskExpiryThreadIntervalSeconds="600"
+        memoryStoreEvictionPolicy="LRU"
+        />
+
+    <!-- cache name="com.wakaleo.articles.caching.businessobjects.Country"
+        maxElementsInMemory="300"
+        eternal="true"
+        overflowToDisk="false"
+        / -->
+
+</ehcache>

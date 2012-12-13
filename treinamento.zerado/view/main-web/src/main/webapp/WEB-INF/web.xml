@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+	<display-name>Dextra Treinamento</display-name>
+	<context-param>
+		<param-name>bundleName</param-name>
+		<param-value>messages</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>br.com.dextra.restinpeace.security.SessionKeyGenerationSessionListener</listener-class>
+	</listener>
+
+	<error-page>
+		<error-code>500</error-code>
+		<location>/error.html</location>
+	</error-page>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+	<!-- Servlets do Holy -->
+	<servlet>
+		<servlet-name>SimpleVelocityServlet</servlet-name>
+		<servlet-class>br.com.dextra.restinpeace.SimpleVelocityServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SimpleVelocityServlet</servlet-name>
+		<url-pattern>*.html</url-pattern>
+		<url-pattern>*.xml</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ModelInvokerServlet</servlet-name>
+		<servlet-class>br.com.dextra.restinpeace.StreamModelInvokerServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ModelInvokerServlet</servlet-name>
+		<url-pattern>/engine/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Filtro para encoding das requisicoes sempre com UTF-8 -->
+	<filter>
+		<filter-name>EncodingFilter</filter-name>
+		<filter-class>br.com.dextra.restinpeace.EncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>EncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<!-- Filtros de seguranca do RIP -->
+	<filter>
+		<filter-name>SecurityErrorResponseHandlerFilter</filter-name>
+		<filter-class>br.com.dextra.restinpeace.security.SecurityErrorResponseHandlerFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>SecurityErrorResponseHandlerFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>FieldChangeControlFilter</filter-name>
+		<filter-class>br.com.dextra.restinpeace.security.FieldChangeControlFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>FieldChangeControlFilter</filter-name>
+		<url-pattern>/engine/*</url-pattern>
+	</filter-mapping>
+
+	<!-- Filtro para evitar HTML injection-->
+	<filter>
+		<filter-name>EscapeParametersFilter</filter-name>
+		<filter-class>br.com.dextra.restinpeace.security.EscapeParametersFilter</filter-class>
+		<init-param>
+			<param-name>escapeType</param-name>
+			<param-value>JavaScript</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>EscapeParametersFilter</filter-name>
+		<url-pattern>/engine/*</url-pattern>
+	</filter-mapping>
+
+	<!-- Filtro para controle de contexto -->
+	<filter>
+		<filter-name>ContextLoaderFilter</filter-name>
+		<filter-class>br.com.dextra.restinpeace.ContextLoaderFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>ContextLoaderFilter</filter-name>
+		<url-pattern>/engine/*</url-pattern>
+	</filter-mapping>
+
+	<!-- Filtro para serializacao -->
+	<filter>
+		<filter-name>SerializationCompressionConfigurationFilter</filter-name>
+		<filter-class>br.com.dextra.restinpeace.SerializationCompressionConfigurationFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>SerializationCompressionConfigurationFilter</filter-name>
+		<url-pattern>/engine/*</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>ModelObjectDesserializerFilter</filter-name>
+		<filter-class>br.com.dextra.restinpeace.ModelObjectDesserializerFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>ModelObjectDesserializerFilter</filter-name>
+		<url-pattern>/engine/*</url-pattern>
+	</filter-mapping>
+
+	<!-- Filtro REST do RIP -->
+	<filter>
+		<filter-name>RESTURIParsingFilter</filter-name>
+		<filter-class>br.com.dextra.restinpeace.RESTURIParsingFilter</filter-class>
+		<init-param>
+			<param-name>engineMapping</param-name>
+			<param-value>/engine/</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>RESTURIParsingFilter</filter-name>
+		<url-pattern>/engine/*</url-pattern>
+	</filter-mapping>
+
+	<!-- Filtro para criacao de HBs -->
+	<filter>
+		<filter-name>BeanInstantiationFilter</filter-name>
+		<filter-class>br.com.dextra.restinpeace.BeanInstantiationFilter</filter-class>
+		<init-param>
+			<param-name>packagePrefix</param-name>
+			<param-value>br.com.dextra.treinamento.fab.view</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>BeanInstantiationFilter</filter-name>
+		<url-pattern>/engine/*</url-pattern>
+	</filter-mapping>
+
+	<!-- Filtro para injecao de recursos -->
+	<filter>
+		<filter-name>BeansInjectionFilter</filter-name>
+		<filter-class>br.com.dextra.restinpeace.BeansInjectionFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>BeansInjectionFilter</filter-name>
+		<url-pattern>/engine/*</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>EJBInjectionFilter</filter-name>
+		<filter-class>br.com.dextra.restinpeace.EJBInjectionFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>EJBInjectionFilter</filter-name>
+		<url-pattern>/engine/*</url-pattern>
+	</filter-mapping>
+
+	<!-- Filtro para Expression Language do RIP -->
+	<filter>
+		<filter-name>ExtendedExpressionLanguageBinderFilter</filter-name>
+		<filter-class>br.com.dextra.treinamento.fab.rip.filter.ExtendedExpressionLanguageBinderFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>ExtendedExpressionLanguageBinderFilter</filter-name>
+		<url-pattern>/engine/*</url-pattern>
+	</filter-mapping>
+
+	<!-- Filtros relacionados ao controle dos XMLs gerados -->
+	<filter>
+		<filter-name>XmlVerificationFilter</filter-name>
+		<filter-class>br.com.dextra.restinpeace.XmlVerificationFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>XmlVerificationFilter</filter-name>
+		<url-pattern>*.xml</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>XmlEntitiesEscapingFilter</filter-name>
+		<filter-class>br.com.dextra.restinpeace.XmlEntitiesEscapingFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>XmlEntitiesEscapingFilter</filter-name>
+		<url-pattern>*.xml</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>VelocityResponseHandlerFilter</filter-name>
+		<filter-class>br.com.dextra.treinamento.fab.rip.filter.ExtendedVelocityResponseHandlerFilter</filter-class>
+		<init-param>
+			<param-name>surroundWithEngineTag</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>macroLibraries</param-name>
+			<param-value>holy_macros.velocity</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>VelocityResponseHandlerFilter</filter-name>
+		<url-pattern>/engine/*</url-pattern>
+	</filter-mapping>
+
+</web-app>

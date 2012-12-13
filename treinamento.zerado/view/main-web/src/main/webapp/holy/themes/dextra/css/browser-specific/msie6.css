@@ -1,0 +1,15 @@
+.holyLoading, .holyLoadingInternal {
+    position: absolute;
+}
+
+.holyLoading {
+    height: expression(document.body.offsetHeight)px;	
+}
+
+.holyLoadingInternal {
+    top: 250px;
+}
+
+ul.dxAppMenu li a {
+    zoom: 1;
+}

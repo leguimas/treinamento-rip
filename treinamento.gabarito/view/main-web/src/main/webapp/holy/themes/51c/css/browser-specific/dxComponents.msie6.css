@@ -1,0 +1,16 @@
+.dxDialogContainerOpened {
+	height: 100%;
+}
+
+.dxDialogContainerOpened .dxDialogOverlay {
+	height: expression(this.parentNode.scrollHeight + "px");
+}
+div.dxMainContent {
+	margin-left:160px;
+	padding-left: 0 !important;
+	width:auto;
+}
+
+div#content div.dxTabs {
+	width:96% !important;
+}

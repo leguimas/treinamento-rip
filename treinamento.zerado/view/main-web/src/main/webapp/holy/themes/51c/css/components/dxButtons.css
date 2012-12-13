@@ -1,0 +1,222 @@
+.dxButtons {
+	margin: 10px 0 0 0;
+	padding: 0;
+    text-align: right;
+}
+.dxButtonsTop {
+	margin-top: 0;
+	padding-top: 0;
+	padding-bottom: 10px;
+}
+
+.dxButton {
+	margin: 2px 2px;
+	padding: 5px 14px 6px 32px;
+	background-color: #eee;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #ddd #bbb #bbb #ddd;
+	background-repeat: no-repeat;
+	background-position: left center;
+	line-height: normal;
+	font-size: 11px;
+	font-weight: bold;
+	color: #333;
+	cursor: pointer;
+}
+
+.dxButtonMain {
+    background-color: #eee;
+    border-color: #ccc #aaa #aaa #ccc;
+    color: #000;
+}
+
+a.dxButton, div.dxButtonMultiple {
+    padding: 6px 14px 7px 32px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.dxButtonHover {
+	background-color: #efefef;
+    border-color: #ddd #c0c0c0 #c0c0c0 #ddd;
+    color: #000;
+}
+
+.dxButton[disabled], .dxButtonDisabled {
+    opacity: 0.6;
+	cursor:not-allowed;
+    border-color: #ddd #ccc #ccc #ddd;
+    background-color: #eee;
+	color: #999;
+}
+
+.dxButtonAdd {
+	background-image: url(../../images/buttons/dxButtonAdd.png);
+}
+.dxButtonBack {
+	background-image: url(../../images/buttons/dxButtonBack.png);
+}
+.dxButtonCancel, .dxButtonNo {
+	background-image: url(../../images/buttons/dxButtonCancel.png);
+}
+.dxButtonClose {
+	background-image: url(../../images/buttons/dxButtonClose.png);
+}
+.dxButtonDownload {
+	background-image: url(../../images/buttons/dxButtonDownload.png);
+}
+.dxButtonEdit {
+	background-image: url(../../images/buttons/dxButtonEdit.png);
+}
+.dxButtonFilter {
+	background-image: url(../../images/buttons/dxButtonFilter.png);
+}
+.dxButtonFinish {
+	background-image: url(../../images/buttons/dxButtonFinish.png);
+}
+.dxButtonForward {
+	background-image: url(../../images/buttons/dxButtonForward.png);
+}
+.dxButtonLogin {
+	background-image: url(../../images/buttons/dxButtonLogin.png);
+}
+.dxButtonMultiple {
+	background-image: url(../../images/buttons/dxButtonMultiple.png);
+}
+.dxButtonPreSave {
+	background-image: url(../../images/buttons/dxButtonPreSave.png);
+}
+.dxButtonRemove {
+	background-image: url(../../images/buttons/dxButtonRemove.png);
+}
+.dxButtonRename {
+	background-image: url(../../images/buttons/dxButtonRename.png);
+}
+.dxButtonReport {
+	background-image: url(../../images/buttons/dxButtonReport.png);
+}
+.dxButtonReset {
+	background-image: url(../../images/buttons/dxButtonReset.png);
+}
+.dxButtonSave {
+	background-image: url(../../images/buttons/dxButtonSave.png);
+}
+.dxButtonSchedule {
+	background-image: url(../../images/buttons/dxButtonSchedule.png);
+}
+.dxButtonSearch {
+	background-image: url(../../images/buttons/dxButtonSearch.png);
+}
+.dxButtonSelect {
+	background-image: url(../../images/buttons/dxButtonSelect.png);
+}
+.dxButtonUpload {
+	background-image: url(../../images/buttons/dxButtonUpload.png);
+}
+.dxButtonView, .dxButtonPreview {
+	background-image: url(../../images/buttons/dxButtonView.png);
+}
+.dxButtonYes, .dxButtonConfirm {
+	background-image: url(../../images/buttons/dxButtonYes.png);
+}
+.dxButtonPdf {
+	background-image: url(../../images/buttons/dxButtonPdf.png);
+}
+.dxButtonXls {
+	background-image: url(../../images/buttons/dxButtonXls.png);
+}
+
+
+
+/* [dxButtonMultiple] */
+
+.dxButtonMultiple {
+    display: inline;
+    position: relative;
+    vertical-align: top;
+    line-height: 30px;
+}
+
+.dxButtonMultiple ul {
+    display: none;
+}
+
+.dxButtonMultiple a,
+.dxButtonMultiple a:hover {
+    border: none;
+    padding: 0;
+    color: #444;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.dxButtonMultiple.dxButtonHover ul {
+    display: block;
+}
+
+.dxButtonMultiple.dxButtonHover ul {
+    position: absolute;
+    bottom: 34px;
+    left: 0;
+    border-style: solid;
+    border-width: 1px;  
+    border-color: #ddd #ccc #ccc #ddd;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: auto;
+    max-height: 200px;
+    width: 200px;
+    padding: 0;
+    text-indent: 0;
+}
+
+.dxButtonMultiple.dxButtonHover li {
+    background: #f0f0f0;
+    left: 1px;
+    display: block;
+    text-align: left;
+    line-height: 1.1em;
+    width: 180px;
+    white-space: normal;
+    text-indent: -4px;
+    padding: 0.3em 0 0.3em 0.6em;
+    font-size: 12px;
+}
+
+.dxButtonMultiple.dxButtonHover li a {
+    white-space: normal;
+}
+
+.dxButtonMultiple.dxButtonHover ul li:hover a {
+    color: #000;
+}
+
+
+.dxPickList ul li input {
+	width: 15px;
+    background-color: transparent;
+    border: none;
+    text-indent: -9999px;	
+}
+
+
+.dxButtonsCopy {
+    background-image: url(../../images/icons/dxIconCopyOne.png);
+}
+.dxButtonsCopyAll {
+    background-image: url(../../images/icons/dxIconCopyAll.png);
+}
+.dxButtonsRemove {
+    background-image: url(../../images/icons/dxIconRemoveOne.png);
+    width: 100px;
+}
+.dxButtonsRemoveAll {
+    background-image: url(../../images/icons/dxIconRemoveAll.png);
+}
+.dxButtonsMoveUp {
+    background-image: url(../../images/icons/dxIconUpOne.png);
+}
+.dxButtonsMoveDown {
+    background-image: url(../../images/icons/dxIconDownOne.png);
+}

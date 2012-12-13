@@ -1,0 +1,247 @@
+* {
+    font-family: Trebuchet MS, Arial, Helvetica, Sans-serif;
+    color: #333;
+}
+
+body {
+    font-size: 13px;
+    background: #b5dcdd url(../images/dextra-default-bg.png) fixed repeat-x;
+}
+
+a {
+    text-decoration: none;
+    color: #36c;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+code {
+    font-family: monospace;
+}
+
+div#wrap {
+    border-left: 1px solid #699;
+    border-right: 1px solid #699;
+    background: #fff;
+}
+
+div#header {
+    background: #fff;
+}
+
+div#header h1 {
+    font-weight: normal;
+    font-size: 35px;
+    letter-spacing: -3px;
+    color: #333;
+	text-indent:-99999px;
+}
+
+div#header h1 em {
+    text-transform: lowercase;
+    color: #369;
+    border-left: 1px solid #eee;
+}
+
+div#main div#content h1 {
+    font-size: 17px;
+    color: #555;
+    margin: 0px 0px 10px;
+    padding: 0pt 0pt 10px;
+}
+
+div#main div#content h1 a {
+    color: #69c;
+}
+
+div#main div#content h2 {
+    font-size: 15px;
+    font-weight: bold;
+    color: #369;
+}
+
+div#main div#content em {
+    font-style: normal;
+    font-weight: bold;
+}
+
+{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+ul.dxFeaturesMenu {
+    border-bottom: 7px solid #eee;
+    background: #fff;
+}
+
+ul.dxFeaturesMenu li {
+    
+}
+
+ul.dxFeaturesMenu li.active {
+    background: #eee;
+    border: 1px solid #e7e7e7;
+    border-bottom: 0;
+    font-size: 15px;
+}
+
+ul.dxFeaturesMenu li.active a {
+    color: #333;
+}
+
+ul.dxAppMenu,
+ul.userMenu {
+    text-align: right;
+    font-size: 11px;
+}
+
+ul.dxAppMenu li,
+ul.userMenu li {
+    
+}
+
+ul.dxAppMenu li a,
+ul.userMenu li a {
+    padding-left: 18px;
+    text-decoration: none;
+    font-weight: normal;
+    background-repeat: no-repeat;
+    background-position: left center;
+    color: #333;
+}
+
+ul.dxAppMenu li a:hover,
+ul.userMenu li a:hover {
+    text-decoration: underline;
+}
+
+ul.dxAppMenu li.logout a,
+ul.userMenu li.logout a {
+    font-weight: bold;
+    font-size: 14px;
+    background-image: url(../images/logout.png);
+}
+
+ul.dxAppMenu li.updateAccount a,
+ul.userMenu li.updateAccount a {
+    background-image: url(../images/my-account.png);
+}
+
+ul.dxAppMenu li.settings a,
+ul.userMenu li.settings a {
+    background-image: url(../images/settings.png);
+}
+
+/* [jquery.tooltip] */
+.jqTooltip {
+    border: 1px solid #ccc;
+    background-color: #eee;
+    opacity: 0.85;
+    font-size: 14px;
+}
+
+/* [/jquery.tooltip] */ /* [customizing jquery ui components] */
+.ui-datepicker-title span {
+    color: #fff !important;
+}
+
+.ui-widget {
+    font-size: 12px !important;
+}
+
+/* [/customizing jquery ui components] */ 
+/* [holy loading] */
+.holyLoading {
+    display: none;
+}
+
+.holyLoading {
+    filter: alpha(opacity = 60);
+    opacity: 0.6;
+    background-color: #eee;
+}
+
+.holyLoadingInternal {
+    border: 2px solid #ccc;
+    color: #000 !important;
+    background: #fff url(../images/load_br.gif) no-repeat center 20px;
+}
+
+.holyLoadingInternal p {
+    color: #000;
+    font-size: 10px;
+    text-align: center;
+}
+
+.holyLoadingInternal p em {
+    color: #000;
+    font-size: 13px;
+    font-style: normal;
+}
+
+/* [holy loading] */ /* [login] */
+div#wrap.loginPage {
+    border: 1px solid #699;
+}
+
+div#wrap.loginPage form fieldset ul li label {
+    text-align: left;
+}
+
+div#wrap.loginPage form fieldset ul li input {
+    font-size: 24px;
+}
+
+/* [/login] */
+i18n {
+    color: inherit
+}
+
+ul.dxViewData {
+    font-weight: normal;
+    line-height: 24px;
+}
+
+ul.dxViewData li dfn {
+    font-weight: 700;
+}
+
+/* [svn version] */
+div.version-revision,
+div.version-revision a,
+div.version-revision a:link,
+div.version-revision a:visited,
+div.version-revision a:active,
+div.version-revision strong,
+div.version-revision span{
+	color: #639A9C !important;
+}
+/* [tela sobre] */
+div.dxAbout {
+    background: #60AFB2 url(../images/about.png) no-repeat 0 0;
+}
+
+div.dxAbout h2 {
+    background: url("../images/livedemo-logo.png") no-repeat scroll 0 0 transparent;
+}
+
+div.dxAbout p.dxby span {
+    color: #ccc;
+}
+
+div.dxAbout ul.dxby a{
+    background: url("../images/logo_dextra.png") no-repeat scroll 0 0 transparent;
+}
+
+div.dxAbout ul.dxby a, 
+div.dxAbout ul.dxby a:link, 
+div.dxAbout ul.dxby a:visited {
+    color: #ccc;
+}
+
+div.dxAbout ul.dxby a span{
+	display: none;
+}

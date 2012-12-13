@@ -1,0 +1,7 @@
+form fieldset.dxFormHintFieldset {
+    width: 65%;
+}
+form .dxFormHint {
+    width: 24%;
+    display: block !important;
+}

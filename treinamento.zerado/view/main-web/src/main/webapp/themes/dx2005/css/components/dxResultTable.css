@@ -1,0 +1,116 @@
+table.dxResultTable thead tr {
+	background:#DFDFDF url(../../images/title-table-bg.png) 0 0 repeat-x;
+	cursor:pointer;
+}
+
+table.dxResultTable thead th {
+	border: 1px solid #ddd;
+	font-weight: bold;
+	color: #000;
+}
+table.dxResultTable thead tr .dxHeaderSortable {
+	background: url(../../images/arrow-dob.gif) 98% 50% no-repeat;
+}
+table.dxResultTable thead tr .dxHeaderSortDown {
+	background: url(../../images/arrow-dow.gif) 98% 50% no-repeat;
+}
+
+table.dxResultTable thead tr .dxHeaderSortUp {
+	background: url(../../images/arrow-up.gif) 98% 50% no-repeat;
+}
+
+table.dxResultTable tbody tr.odd td {
+	background: #f0f0ff;
+}
+
+table.dxResultTable tbody td {
+	border-bottom: 1px solid #efefef;
+}
+
+table.dxResultTable tbody tr.dxOdd td {
+	background: #efefef;
+}
+
+table.dxResultTable tbody tr.dxSelectedRow td {
+	background: #ffefbb;
+}
+
+table.dxResultTable tbody tr.dxOdd.dxSelectedRow td {
+	background: #ffeeaa;
+}
+
+table.dxPaginatedResultTable tbody tr {
+	display: none;
+}
+
+table.dxPaginatedResultTable tbody tr.dxView {
+	display: table-row;
+}
+
+table.dxPaginatedResultTable tbody tr.dxSelectAll {
+	display: table-row;
+	background: #dff;
+}
+
+table.dxPaginatedResultTable tbody tr.dxSelectAll td {
+	color: #777;
+}
+
+div.dxPaginationLinks {
+	margin:10px 0 0 0;
+	text-align: center;
+}
+
+div.dxPaginationLinks a {
+	cursor: pointer;
+	color: #666;
+	font-weight: bold;
+	padding: 4px 8px;
+	font-size: 11px;
+	margin:0 1px;
+}
+
+div.dxPaginationLinks a.disabled {
+	color: #bbb;
+}
+
+div.dxPaginationLinks a:hover,
+div.dxPaginationLinks a.selected {
+	background: url(../../images/navbar-bg.png) center center repeat-x;
+	color: #000;
+}
+
+table.dxResultTable td.actions {
+	vertical-align: bottom;
+	width: 150px;
+}
+
+table.dxResultTable td.actions a {
+	cursor: pointer;
+	margin: 0;
+	border: none;
+	padding: 20px 0px 0px;
+	font-size: 10px;
+	line-height: 1em;
+	font-weight: bold;
+	background: transparent none no-repeat top center;
+	float: left;
+	width: 50px;
+	text-align: center;
+}
+
+table.dxResultTable td.actions a:hover {
+	color: #000;
+}
+
+table.dxResultTable td.actions a.edit {
+	background-image: url(../../images/actions/edit.png);
+}
+
+table.dxResultTable td.actions a.remove {
+	background-image: url(../../images/actions/remove.png);
+}
+
+table.dxResultTable td.actions a.view {
+	background-image: url(../../images/actions/view.png);
+}

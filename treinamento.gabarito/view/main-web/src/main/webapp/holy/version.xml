@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<info>
+<entry
+   kind="dir"
+   path="."
+   revision="1196">
+<url>https://dextranet.dextra.com.br/svn/dextra_holy/tags/holy-2.1.7</url>
+<repository>
+<root>https://dextranet.dextra.com.br/svn/dextra_holy</root>
+<uuid>247e5d59-c1cc-42ee-a19a-cb4515d2cb13</uuid>
+</repository>
+<wc-info>
+<schedule>normal</schedule>
+<depth>infinity</depth>
+</wc-info>
+<commit
+   revision="1196">
+<author>antonio.jozzolino</author>
+<date>2010-11-30T17:54:22.616700Z</date>
+</commit>
+</entry>
+</info>

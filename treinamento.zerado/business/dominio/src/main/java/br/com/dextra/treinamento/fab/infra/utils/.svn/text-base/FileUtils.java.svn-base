@@ -1,0 +1,57 @@
+package br.com.dextra.captus.infra.utils;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+public class FileUtils {
+
+	public static void moverArquivo(String origem, String destino) {
+		try {
+			File origFile = new File(origem);
+			FileInputStream fis = new FileInputStream(origFile);
+
+			criarArquivo(destino, fis);
+			fis.close();
+
+			origFile.delete();
+		} catch (IOException e) {
+			throw new RuntimeException("Nao foi possivel criar arquivo temporario.", e);
+		}
+	}
+
+	public static void criarArquivo(String nomeArquivo, InputStream in) {
+		try {
+			File destPath = new File(nomeArquivo.substring(0, nomeArquivo.lastIndexOf(File.separator)));
+			if (!destPath.exists()) {
+				destPath.mkdirs();
+			}
+
+			File destFile = new File(nomeArquivo);
+			FileOutputStream arquivoTemp = new FileOutputStream(destFile);
+			byte[] buff = new byte[1000];
+			for (int aux = 0; aux != -1;) {
+				aux = in.read(buff, 0, 1000);
+				if (aux != -1) {
+					arquivoTemp.write(buff, 0, aux);
+				}
+			}
+			arquivoTemp.close();
+		} catch (IOException e) {
+			throw new RuntimeException("Nao foi possivel criar arquivo temporario.", e);
+		}
+	}
+
+	public static String obtemExtensaoDoArquivo(String nomeArquivo) {
+		File arquivoTemporario = new File(nomeArquivo);
+		String[] splitNomeDoArquivo = arquivoTemporario.getName().split("\\.");
+		if (splitNomeDoArquivo.length > 1) {
+			return splitNomeDoArquivo[splitNomeDoArquivo.length - 1];
+		} else {
+			return "";
+		}
+	}
+
+}

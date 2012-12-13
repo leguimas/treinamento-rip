@@ -1,0 +1,103 @@
+package br.com.dextra.captus.infra.utils;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipException;
+import java.util.zip.ZipOutputStream;
+
+/**
+ * Utilit&aacute;rio para a cria&ccedil;&atilde;o e a manipula&ccedil;&atilde;o de arquivos ZIP. C&oacute;digo obtido do projeto
+ * sumus_auditor.
+ */
+public class ZipUtils {
+
+	private static final int TAMANHO_BUFFER = 2048; // 2 Kb
+
+	public void criarZip(File arquivoZip, File[] arquivos) throws ZipException, IOException {
+		FileOutputStream fos = null;
+		BufferedOutputStream bos = null;
+		try {
+			fos = new FileOutputStream(arquivoZip);
+			bos = new BufferedOutputStream(fos, TAMANHO_BUFFER);
+			criarZip(bos, arquivos);
+		} finally {
+			if (bos != null) {
+				try {
+					bos.close();
+				} catch (Exception e) {
+				}
+			}
+			if (fos != null) {
+				try {
+					fos.close();
+				} catch (Exception e) {
+				}
+			}
+		}
+	}
+
+	public void criarZip(OutputStream os, File[] arquivos) throws ZipException, IOException {
+		ZipOutputStream zos = null;
+		try {
+			zos = new ZipOutputStream(os);
+			for (int i = 0; i < arquivos.length; i++) {
+				adicionarArquivoNoZip(zos, arquivos[i]);
+			}
+		} finally {
+			if (zos != null) {
+				try {
+					zos.close();
+				} catch (Exception e) {
+				}
+			}
+		}
+	}
+
+	private void adicionarArquivoNoZip(ZipOutputStream zos, File arquivo) throws IOException {
+		FileInputStream fis = null;
+		BufferedInputStream bis = null;
+		byte buffer[] = new byte[TAMANHO_BUFFER];
+		try {
+			String caminhoEntradaZip = null;
+			String caminhoInicial = arquivo.getParent();
+			int idx = arquivo.getAbsolutePath().indexOf(caminhoInicial);
+			if (idx >= 0) {
+				// calcula os diretorios a partir do diretorio inicial
+				// isso serve para nao colocar uma entrada com o caminho
+				// completo
+				caminhoEntradaZip = arquivo.getAbsolutePath().substring(idx + caminhoInicial.length() + 1);
+			}
+
+			ZipEntry entrada = new ZipEntry(caminhoEntradaZip);
+			zos.putNextEntry(entrada);
+			zos.setMethod(ZipOutputStream.DEFLATED);
+
+			fis = new FileInputStream(arquivo);
+			bis = new BufferedInputStream(fis, TAMANHO_BUFFER);
+			int bytesLidos = 0;
+			while ((bytesLidos = bis.read(buffer, 0, TAMANHO_BUFFER)) != -1) {
+				zos.write(buffer, 0, bytesLidos);
+			}
+		} finally {
+			if (bis != null) {
+				try {
+					bis.close();
+				} catch (Exception e) {
+				}
+			}
+			if (fis != null) {
+				try {
+					fis.close();
+				} catch (Exception e) {
+				}
+			}
+		}
+	}
+
+}

@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/dextra_sepg/!svn/ver/1612/trunk/devel/captus/business/dominio/src/main/java/br/com/dextra/captus/infra/utils
+END
+FileUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/dextra_sepg/!svn/ver/1612/trunk/devel/captus/business/dominio/src/main/java/br/com/dextra/captus/infra/utils/FileUtils.java
+END
+XMLUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/dextra_sepg/!svn/ver/1612/trunk/devel/captus/business/dominio/src/main/java/br/com/dextra/captus/infra/utils/XMLUtils.java
+END
+ZipUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/dextra_sepg/!svn/ver/1612/trunk/devel/captus/business/dominio/src/main/java/br/com/dextra/captus/infra/utils/ZipUtils.java
+END
+QueryUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/dextra_sepg/!svn/ver/1612/trunk/devel/captus/business/dominio/src/main/java/br/com/dextra/captus/infra/utils/QueryUtils.java
+END
+StringUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/dextra_sepg/!svn/ver/1612/trunk/devel/captus/business/dominio/src/main/java/br/com/dextra/captus/infra/utils/StringUtils.java
+END
+NumberUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/dextra_sepg/!svn/ver/1612/trunk/devel/captus/business/dominio/src/main/java/br/com/dextra/captus/infra/utils/NumberUtils.java
+END
+ReflectionUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/dextra_sepg/!svn/ver/1612/trunk/devel/captus/business/dominio/src/main/java/br/com/dextra/captus/infra/utils/ReflectionUtils.java
+END
+CSVUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/dextra_sepg/!svn/ver/1612/trunk/devel/captus/business/dominio/src/main/java/br/com/dextra/captus/infra/utils/CSVUtils.java
+END
+DateUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/dextra_sepg/!svn/ver/1612/trunk/devel/captus/business/dominio/src/main/java/br/com/dextra/captus/infra/utils/DateUtils.java
+END

@@ -1,0 +1,107 @@
+
+div.dxContentMenu {
+	width:100%;
+	height:auto;
+	z-index:1;
+	display:none;
+	margin:0;
+}
+
+#contentMenuExample div.dxContentMenu {
+	display:block;	
+}
+
+div.dxCollapsedContentMenu {
+	width:100%;
+	height:auto;
+}
+
+div.dxCollapsedContentMenu ul {
+	width:auto;
+}
+
+ul.dxFeaturesMenu {
+	font-weight: normal;
+}
+
+div.dxContentMenu {
+	background: #222222 url(../../images/navbar-bg.png) center center repeat-x;
+	margin: 0 0 15px 0;
+	padding: 0;
+	border-bottom:1px solid #ACACAC;
+	float:none;
+	left:auto;
+	overflow:hidden;
+}
+
+div.dxContentMenu ul {
+	font-size: 13px;
+	padding:0;
+	float:left;
+	margin:0;
+}
+
+div.dxContentMenu ul li {
+	float:right;
+	clear:none;
+	height:22px;
+	margin:5px 2px 5px 0;
+}
+
+div.dxContentMenu ul li a {
+	color: #444;
+	outline:0;
+	padding:0 10px 0 26px;
+	background-position:left center;
+	font-size:11px;
+	line-height:22px;
+	display:block;
+	margin:0;
+	height:22px;
+	cursor:pointer;
+}
+
+div.dxCollapsedContentMenu ul li {
+	margin:5px 10px;
+}
+
+div.dxCollapsedContentMenu ul li,
+div.dxCollapsedContentMenu ul li a {
+	text-indent:-9999px;
+	width:22px;
+	height:22px;
+	display:block;
+	padding:0;
+}
+
+div.dxContentMenu ul li a:hover {
+	color: #000;
+}
+
+div.dxContentMenu div.close {
+	float:left;
+	height:32px;
+	margin:0 0 0 10px;
+}
+
+
+div.dxContentMenu div.close input,
+div.dxCollapsedContentMenu div.close input {
+	width:8px;
+	height:4px;
+	display:block;
+	margin:10px 0 0 0;
+}
+
+div.dxContentMenu div.close input {
+	text-indent: -9999px;
+	background: url(../../images/collapse-expand.gif) 100% 100% no-repeat;
+}
+
+div.dxContentMenu ul li.start a {
+	background-image: url(../images/dextra/menu-home.png);
+}
+
+div.dxCollapsedContentMenu div.close input {
+	background: url(../../images/collapse-expand.gif) 0 0 no-repeat;
+}

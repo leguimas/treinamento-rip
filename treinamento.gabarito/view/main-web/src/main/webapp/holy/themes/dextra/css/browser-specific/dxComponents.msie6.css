@@ -1,0 +1,24 @@
+.dxDialogContainerOpened {
+	height: 100%;
+}
+
+.dxDialogContainerOpened .dxDialogOverlay {
+	height: expression(this.parentNode.scrollHeight + "px");
+}
+div.dxContentMenu {
+	left:-200px;
+}
+div.dxCollapsedContentMenu {
+	left:-60px;	
+}
+/* [dxTabs] */ 
+.dxTabs .dxTabsList li {
+	position: relative;
+	z-index:1;
+}
+div.dxTabs .dxTabsList li a {
+	position: relative;
+}
+.dxTabs .dxTabContent {
+	position: relative;
+}

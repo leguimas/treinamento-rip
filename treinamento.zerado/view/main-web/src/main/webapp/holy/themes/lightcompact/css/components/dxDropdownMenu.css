@@ -1,0 +1,151 @@
+div.dxDropdownMenu {
+	border:0;
+	margin:0 0 0 0;
+	background:url(../../images/bg-nav.png) 0 0 repeat-x;
+}
+div.dxDropdownMenu ul {
+	background: none;
+	padding: 0px;
+	height:30px;
+}
+div.dxDropdownMenu ul li,
+div.dxDropdownMenu ul li a {
+	font-weight: normal;
+	font-size: 13px;
+	background-repeat:no-repeat;
+	display:inline-block;
+	height:30px;
+	line-height:30px;
+}
+div.dxDropdownMenu ul li a {
+	padding:0 10px;
+}
+div.dxDropdownMenu ul li a span.firstLevelArrow {
+	display:inline-block;
+	height: 10px;
+	width: 10px;
+	margin-top:5px;
+	text-indent: -9999px;
+	background: transparent url(../../images/drop-menu-expand.gif) no-repeat center;
+}
+div.dxDropdownMenu ul li ul {
+	background: #FFF;
+	line-height: 14px;
+	width:215px;
+	border-top:1px solid #D6E2FF;
+	z-index:100;
+}
+div.dxDropdownMenu ul li ul li {
+	font-weight: normal;
+	font-size: 11px;
+	border:1px solid #c4d5ff;
+	border-top:none;
+	background-repeat:no-repeat;
+	background-color:#FFF;
+}
+div.dxDropdownMenu ul li ul li a {
+	color:#012580;
+	background-repeat:no-repeat;
+	padding:0 10px 0 25px;
+}
+div.dxDropdownMenu ul li ul li.odd {
+	border-bottom:1px solid #d6e2ff;
+	background-color:#FFF;
+}
+div.dxDropdownMenu ul li ul li.hover {
+	background: #edf2ff;
+}
+div.dxDropdownMenu ul li ul li ul {
+	left:213px;
+}
+div.dxDropdownMenu ul li ul li.add a {
+	background: url(../../../../../images/menu-add.png) left center no-repeat;
+}
+div.dxDropdownMenu ul li ul li.search a {
+	background: url(../../../../../images/menu-search.png) left center no-repeat;
+}
+div.dxDropdownMenu ul li ul li.about a {
+	background: url(../../../../../images/menu-about.png) left center no-repeat;
+}
+div.dxDropdownMenu ul li ul li.dropMenu a {
+	background: url(../../../../../images/menu-drop-menu.png) left center no-repeat;
+}
+div.dxDropdownMenu ul li ul li.contentMenu a {
+	background: url(../../../../../images/menu-content-menu.png) left center no-repeat;
+}
+div.dxDropdownMenu ul li ul li.folder a {
+	background: url(../../../../../images/menu-folder.png) left center no-repeat;
+}
+div.dxDropdownMenu ul li ul li.dxForm a {
+	background: url(../../../../../images/menu-form.png) left center no-repeat;
+}
+div.dxDropdownMenu ul li ul li.dxFormFluid a {
+	background: url(../../../../../images/menu-form-fluid.png) left center no-repeat;
+}
+div.dxDropdownMenu ul li ul li.formFolder a {
+	background: url(../../../../../images/menu-folder-forms.png) left center no-repeat;
+}
+div.dxDropdownMenu ul li ul li.dxFormHint a {
+	background: url(../../../../../images/menu-form-hint.png) left center no-repeat;
+}
+div.dxDropdownMenu ul li ul li.dxSuggestion a {
+	background: url(../../../../../images/menu-suggestions.png) left center no-repeat;
+}
+div.dxDropdownMenu ul li ul li.textfield a {
+	background: url(../../../../../images/menu-textfield.png) left center no-repeat;
+}
+div.dxDropdownMenu ul li ul li.textarea a {
+	background: url(../../../../../images/menu-textarea.png) left center no-repeat;
+}
+div.dxDropdownMenu ul li ul li.radiobox a {
+	background: url(../../../../../images/menu-radio.png) left center no-repeat;
+}
+div.dxDropdownMenu ul li ul li.checkbox a {
+	background: url(../../../../../images/menu-check.png) left center no-repeat;
+}
+div.dxDropdownMenu ul li ul li.select a {
+	background: url(../../../../../images/menu-select.png) left center no-repeat;
+}
+div.dxDropdownMenu ul li ul li.simpleForm a {
+	background: url(../../../../../images/menu-simple-form.png) left center no-repeat;
+}
+div.dxDropdownMenu ul li ul li.buttons a {
+	background: url(../../../../../images/menu-buttons.png) left center no-repeat;
+}
+div.dxDropdownMenu ul li ul li.icons a {
+	background: url(../../../../../images/menu-icons.png) left center no-repeat;
+}
+div.dxDropdownMenu ul li ul li.pickList a {
+	background: url(../../../../../images/menu-simple-form.png) left center no-repeat;
+}
+div.dxDropdownMenu ul li ul li.tabs a {
+	background: url(../../../../../images/menu-tabs.png) left center no-repeat;
+}
+div.dxDropdownMenu ul li ul li.resultTable a {
+	background: url(../../../../../images/menu-result-table.png) left center no-repeat;
+}
+div.dxDropdownMenu ul li ul li.tooglePanel a {
+	background: url(../../../../../images/menu-toogle-panel.png) left center no-repeat;
+}
+div.dxDropdownMenu ul li ul li.dialogsFolder a {
+	background: url(../../../../../images/menu-folder-dialogs.png) left center no-repeat;
+}
+div.dxDropdownMenu ul li ul li.dialog a {
+	background: url(../../../../../images/menu-dialog.png) left center no-repeat;
+}
+div.dxDropdownMenu ul li ul li.infoDialog a {
+	background: url(../../../../../images/menu-dialog-info.png) left center no-repeat;
+}
+div.dxDropdownMenu ul li ul li.errorDialog a {
+	background: url(../../../../../images/menu-dialog-error.png) left center no-repeat;
+}
+div.dxDropdownMenu ul li ul li.warningDialog a {
+	background: url(../../../../../images/menu-dialog-warning.png) left center no-repeat;
+}
+div.dxDropdownMenu ul li ul li.successDialog a {
+	background: url(../../../../../images/menu-dialog-success.png) left center no-repeat;
+}
+div.dxDropdownMenu ul li ul li.masks a {
+	background: url(../../../../../images/menu-masks.png) left center no-repeat;
+}
+

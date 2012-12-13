@@ -1,0 +1,13 @@
+div.dxTooglePanel {
+    margin-top: 5px;
+}
+
+div.dxTooglePanel .dxTitle, div.dxTooglePanel h3 {
+    cursor: pointer;
+    background: #666;
+    color: #fff;
+}
+
+div.dxTooglePanel .dxContent {
+    border: 1px solid #ddd;
+}

@@ -1,0 +1,61 @@
+package br.com.dextra.captus.infra.utils;
+
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathExpression;
+import javax.xml.xpath.XPathExpressionException;
+import javax.xml.xpath.XPathFactory;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.xml.sax.SAXException;
+
+public class XMLUtils {
+
+	public static org.w3c.dom.Document createXMLDocument(String xmlString) {
+		try {
+			DocumentBuilder documentBuilder = DocumentBuilderFactory
+					.newInstance().newDocumentBuilder();
+
+			ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(
+					xmlString.getBytes("UTF-8"));
+
+			return documentBuilder.parse(byteArrayInputStream);
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		} catch (ParserConfigurationException e) {
+			throw new RuntimeException(e);
+		} catch (SAXException e) {
+			throw new RuntimeException(e);
+		}
+	}
+
+	public static Element executeXPath(String xpathString, Document document) {
+		return executeXPathInternal(xpathString, document);
+	}
+
+	public static Element executeXPath(String xpathString, Element element) {
+		return executeXPathInternal(xpathString, element);
+	}
+
+	public static Element executeXPath(String xpathString, Node node) {
+		return executeXPathInternal(xpathString, node);
+	}
+
+	private static Element executeXPathInternal(String xpathString, Object obj) {
+		XPathFactory factory = XPathFactory.newInstance();
+		XPathExpression xpath;
+		try {
+			xpath = factory.newXPath().compile(xpathString);
+			return (Element) xpath.evaluate(obj, XPathConstants.NODE);
+		} catch (XPathExpressionException e) {
+			throw new RuntimeException(e);
+		}
+	}
+}

@@ -1,0 +1,234 @@
+html,
+body {
+	height: 100%;
+}
+div#wrap {
+	margin: 0 auto;
+	width:95%;
+	overflow:hidden;
+}
+div#header {
+	padding: 10px 14px;
+}
+div#header img {
+	float: left;
+	margin: 10px;
+	position: relative;
+	z-index: 1;
+}
+div#header h1 a {
+	margin-top: 7px;
+	height:99px;
+	width:291px;
+	background:url(../images/livedemo-logo.png) 0 0 no-repeat;
+}
+div#header h1 em {
+	padding-left: 10px;
+	margin-left: 10px;
+}
+div#wrap div#header ul.themes {
+	right:205px;
+	top:7px;
+}
+div#wrap div#header ul.themes li a {
+	border:1px solid #A9D6D8;
+}
+div#footer {
+	clear: both;
+}
+div#main {
+	position: relative;	
+	overflow:hidden;
+}
+div#main div.dxExpandedContent {
+	margin:0 0 0 60px;
+	padding:10px 0;
+}
+div#main div.dxMainContent {
+	padding:10px;
+}
+
+div#main div#content h1 {
+	margin: 5px 0;
+}
+div#main div#content h2 {
+	margin-top: 10px;
+}
+ul.dxFeaturesMenu {
+	padding: 5px 10px;
+	margin:15px 0 0 0;
+}
+ul.dxFeaturesMenu li {
+	display: inline;
+	margin-right: 10px;
+}
+ul.dxFeaturesMenu li.active {
+	padding: 5px 10px;
+}
+ul.dxAppMenu,
+ul.userMenu {
+	position:absolute;
+	top:10px;
+	right:10px;
+}
+ul.dxAppMenu li,
+ul.userMenu li {
+	display: inline;
+	margin-left: 10px;
+	padding: 5px 0;
+}
+ul.dxAppMenu li.logout,
+ul.userMenu li.logout {
+	display: block;
+	margin-bottom: 4px;
+}
+ul.dxAppMenu li a,
+ul.userMenu li a {
+	padding-left: 18px;
+	zoom: 1;
+}
+
+/* [jquery.tooltip] */
+.jqTooltip {
+	position: absolute;
+	z-index: 5000;
+	padding: 5px;
+}
+.jqTooltip h3,
+.jqTooltip div {
+	margin: 0;
+}
+/* [/jquery.tooltip] */
+
+/* [customizing jquery ui components] */
+.ui-datepicker {
+	z-index: 1;
+	top: -999999px;
+}
+/* [/customizing jquery ui components] */
+
+/* [holy loading] */
+.holyLoading {
+	display: none;
+}
+.holyLoading {
+	display: block;
+	position: fixed;
+	z-index: 3500;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.holyLoadingInternal {
+	overflow: hidden;
+	position: fixed;
+	z-index: 3;
+	top: 50%;
+	left: 50%;
+	width: 130px;
+	height: 70px;
+	padding: 10px;
+	margin-top: -35px;
+	margin-left: -65px;
+}
+.holyLoadingInternal p {
+	margin-top: 32px;
+}
+/* [holy loading] */
+
+
+/* [login] */
+div#wrap.loginPage {
+	position: relative;
+	left: 50%;
+	width: 400px;
+	min-height: 200px;
+	padding: 0 0 10px 0;
+	margin: 20px 0 0 -200px;
+}
+div#wrap.loginPage div#content {
+	padding: 0.5em 2em;
+}
+div#wrap.loginPage form fieldset ul {
+	float: none;
+}
+div#wrap.loginPage form fieldset ul li label {
+	display: block;
+	float: none;
+	width: auto;
+}
+div#wrap.loginPage form fieldset ul li input {
+	width: 100%;
+	padding: 3px;
+}
+/* [/login] */
+
+form.dxFormFluid fieldset ul li.check label{
+	vertical-align: middle;	
+}
+/* [svn version] */
+div.version-revision  {
+	font-size:9px;
+	left:275px;
+	margin:0;
+	position:absolute;
+	top:67px;
+}
+/* [tela sobre] */
+div.dxAbout {
+    background: transparent url(../images/about.png) no-repeat 0 0;
+    width: 716px;
+    height: 326px;
+    position: relative;
+	font-size:11px !important;
+}
+
+div.dxAbout h2 {
+    height: 99px;
+    margin-top: 7px;
+    width: 291px;
+}
+
+div.dxAbout h2 span {
+    display: none;
+}
+
+div.dxAbout h3 {
+    margin: 10px 0 0 0;
+	font-size:15px;
+}
+
+div.dxAbout div.version-revision {
+    left: 245px;
+    top: 90px;
+    position: absolute;
+}
+div.dxAbout ul.dxby{
+	position: absolute;
+	top: 111px;
+	left: 554px;
+}
+div.dxAbout ul.dxby li{
+	float: left;	
+} 
+div.dxAbout ul.dxby a{
+    width: 170px;
+	height: 39px;
+	display: inline-block;
+	margin: -23px 0 0 -8px;
+}
+
+div.dxAbout ul.dxby a, 
+div.dxAbout ul.dxby a:link, 
+div.dxAbout ul.dxby a:visited {
+    cursor: hand;
+}
+
+div.dxAbout div.dialogContent {
+    height: auto;
+    left: 25px;
+    position: absolute;
+    top: 150px;
+    width: 685px;
+}

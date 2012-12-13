@@ -1,0 +1,19 @@
+package br.com.dextra.treinamento.fab.infra.utils;
+
+import java.util.Map;
+import java.util.Set;
+import java.util.Map.Entry;
+
+import javax.persistence.Query;
+
+public class QueryUtils {
+
+	public static Query setQueryParameters(Map<String, Object> params, Query query) {
+		Set<Entry<String, Object>> entrySet = params.entrySet();
+		for (Entry<String, Object> entry : entrySet) {
+			query.setParameter(entry.getKey(), entry.getValue());
+		}
+
+		return query;
+	}
+}

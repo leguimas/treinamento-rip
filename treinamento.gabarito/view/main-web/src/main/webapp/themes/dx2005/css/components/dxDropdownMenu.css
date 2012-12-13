@@ -1,0 +1,58 @@
+div.dxDropdownMenu {
+	position: relative;
+	clear: both;
+	background: #fff url(../../images/bg_menu.jpg) repeat top left;
+	padding: 0;
+}
+
+	div.dxDropdownMenu ul {
+		background: transparent;
+		padding: 0;
+	}
+
+		div.dxDropdownMenu ul li {
+			font-weight: bold;
+			font-size: 11px;
+			border-right: 1px solid #fff;
+			color: #666;
+			border-bottom: 3px solid #017;
+		}
+		div.dxDropdownMenu ul li.hover {
+			border-bottom-color: #f90;
+		}
+		div.dxDropdownMenu ul li a {
+			color: #666;
+		}
+		div.dxDropdownMenu ul li.hover a {
+			text-decoration: none;
+		}
+
+		   div.dxDropdownMenu ul li span.firstLevelArrow {
+	            display: table-cell;
+	            height: 10px;
+	            width: 10px;
+	            text-indent: -9999px;
+	            background: transparent url(../../images/drop-menu-expand.gif) no-repeat scroll bottom;
+	        }
+
+			div.dxDropdownMenu ul li ul {
+				background: #eaeaea;
+				line-height: 12px;
+				z-index: 9999;
+			}
+
+				div.dxDropdownMenu ul li ul li {
+					font-weight: normal;
+					font-size: 10px;
+					background: #eaeaea;
+					color: #666;
+				}
+
+				div.dxDropdownMenu ul li ul li.odd {
+					background: #eaeaea;
+				}
+
+				div.dxDropdownMenu ul li ul li.hover {
+					border-bottom-color: #f90;
+					background: #eaeaea;
+				}

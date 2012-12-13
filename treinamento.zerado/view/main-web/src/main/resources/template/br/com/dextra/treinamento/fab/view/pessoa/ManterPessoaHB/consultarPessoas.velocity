@@ -1,0 +1,43 @@
+<action selector="#content">
+	<h1>#bundle('manterPessoa.titulo') > #bundle('manterPessoa.consulta.titulo')</h1>
+
+	<form name="frmConsultarPessoas" method="post">
+
+		<fieldset class="dxFilter">
+			<legend>#bundle('aplicacao.filtros')</legend>
+			<ul>
+				<li>
+					<label for="txtNome">#bundle("pessoa.nome")</label>
+					<input type="text" id="txtNome" name="{filtro.nome}" value="$!{page.filtro.nome}" />
+				</li>
+				<li>
+					<label for="ddlPatente">#bundle("pessoa.patente")</label>
+					<select id="ddlPatente" name="{filtro.patente}">
+						<option value=""></option>
+						#foreach($patente in $page.patentesCadastradas)
+							<option value="$patente.id">${patente.nome}</option>
+						#end
+					</select>
+				</li>
+				<li>
+					<label for="">#bundle("pessoa.dataIngresso")</label>
+					<input type="text" class="date" id="txtDataIngressoInicial" name="{filtro.dataIngressoInicial}" value="$dateFormat.format(${page.filtro.dataIngressoInicial})" />
+					a
+					<input type="text" class="date" id="txtDataIngressoFinal" name="{filtro.dataIngressoFinal}" value="$dateFormat.format(${page.filtro.dataIngressoFinal})" />
+				</li>
+			</ul>
+		</fieldset>
+
+		<div class="dxButtons">
+			<input type="button" class="dxButton dxButtonFilter" value="#bundle('aplicacao.acao.buscar')"
+				hl:onclick="engine/pessoa/ManterPessoaHB/buscarPessoasPorFiltro.xml" />
+			<input type="button" class="dxButton dxButtonAdd" value="#bundle('aplicacao.acao.incluir')"
+				hl:onclick="engine/pessoa/ManterPessoaHB/incluir.xml" />
+		</div>
+	</form>
+
+	<div id="gridPessoas" />
+
+</action>
+
+#parse("$page.gridDePessoas")

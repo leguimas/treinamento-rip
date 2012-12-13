@@ -1,0 +1,67 @@
+<action selector="#content">
+	<h1>#bundle('manterPessoa.titulo') >
+		#if ($page.estaEditando)
+			#bundle('manterPessoa.edicao.titulo')
+		#else
+			#bundle('manterPessoa.inclusao.titulo')
+		#end
+	</h1>
+
+	<form name="frmCadastroPessoa" method="post">
+		#if ($page.estaEditando)
+			<input type="hidden" id="hdnId" name="{pessoa.id}" value="${page.pessoa.id}" />
+		#end
+
+		<fieldset>
+			<legend>#bundle('manterPessoa.dados.titulo')</legend>
+
+			<ul>
+				<li>
+					<label for="txtNome">#bundle("pessoa.nome")</label>
+					<input type="text" id="txtNome" name="{pessoa.nome}" value="$!{page.pessoa.nome}" />
+				</li>
+				<li>
+					<label for="ddlSexo">#bundle("pessoa.sexo")</label>
+					<select id="ddlSexo" name="{pessoa.sexo}">
+						<option value=""></option>
+						#foreach($sexo in $page.sexosPossiveis)
+							<option value="$sexo">${sexo}</option>
+						#end
+					</select>
+				</li>
+				<li>
+					<label for="ddlPatente">#bundle("pessoa.patente")</label>
+					<select id="ddlPatente" name="{pessoa.patente}">
+						<option value=""></option>
+						#foreach($patente in $page.patentesCadastradas)
+							<option value="$patente.id">${patente.nome}</option>
+						#end
+					</select>
+				</li>
+				<li>
+					<label for="">#bundle("pessoa.dataNascimento")</label>
+					<input type="text" class="date" id="txtDataNascimento" name="{pessoa.dataNascimento}" value="$dateFormat.format(${page.pessoa.dataNascimento})" />
+				</li>
+				<li>
+					<label for="">#bundle("pessoa.dataIngresso")</label>
+					<input type="text" class="date" id="txtDataIngresso" name="{pessoa.dataIngresso}" value="$dateFormat.format(${page.pessoa.dataIngresso})" />
+				</li>
+			</ul>
+		</fieldset>
+
+		<div class="dxButtons">
+			<input type="button" class="dxButton dxButtonMain dxButtonSave" value="#bundle('aplicacao.acao.salvar')"
+				hl:onclick="engine/pessoa/ManterPessoaHB/salvar.xml" />
+			<input type="button" class="dxButton dxButtonCancel" value="#bundle('aplicacao.acao.cancelar')"
+				hl:onclick="engine/pessoa/ManterPessoaHB/cancelar.xml" />
+		</div>
+	</form>
+
+</action>
+
+<script>
+	#if ($page.estaEditando)
+		$('select#ddlPatente option[value=$!page.pessoa.patente.id]').attr("selected", "selected");
+		$('select#ddlSexo option[value=$!page.pessoa.sexo]').attr("selected", "selected");
+	#end
+</script>

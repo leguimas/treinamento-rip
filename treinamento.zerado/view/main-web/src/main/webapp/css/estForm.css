@@ -1,0 +1,60 @@
+form.estFormQuestionario li.pergunta {
+	float: none;
+}
+
+.questionario .questao {
+	float: left;
+	padding: 10px;
+	clear: none;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	margin: 4px;
+	background: #fff url(../images/bg_fieldset_na.png) repeat-x top;
+	min-height: 190px;
+}
+.questionario .questao h3 {
+	font-size: 12px;
+	font-weight: bold;
+}
+.questionario .questaoOdd {
+
+}
+.questionario .categoria h2 {
+	padding-top: 20px;
+	clear: both;
+	height: auto;
+}
+
+.questionario .semCategoria ul {
+	padding-top: 20px;
+}
+.questionario .semCategoria .questao {
+	clear: both;
+}
+
+.questionario dl dt, .questionario dl dd {
+	float: left;
+}
+.questionario dl dt {
+	font-weight: bold;
+	clear: both;
+}
+.questionario dl dd {
+	margin-left: 4px;
+}
+
+.questionario form {
+	clear: both;
+}
+.questionario form .nome {
+	margin-top: 10px;
+}
+.questionario form .nome label,
+.questionario form .nome input {
+	font-size: 14px;
+}
+.questionario form .nome label {
+	width: 60px;
+	font-weight: bold;
+}

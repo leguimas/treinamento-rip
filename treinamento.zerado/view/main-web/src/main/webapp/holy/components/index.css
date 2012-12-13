@@ -1,0 +1,443 @@
+.dxDialog {
+    display: none;
+    position: fixed;
+	top: 17%;
+    left: 50%;
+    width: 740px;
+    margin-left: -390px;
+    min-height: 100px;
+    height: auto;
+    padding: 12px;
+    overflow: hidden;
+}
+
+.dxDialog .dxClose {
+    float: right;
+    width: 16px;
+    height: 16px;
+    text-indent: -9999px;
+	outline: 0;
+}
+
+.dxDialog h3 {
+    margin-bottom: 5px;
+}
+
+.dxDialogContent {
+    margin: 0;
+    padding: 10px 0 0;
+}
+
+.dxErrorDialog h3, .dxInfoDialog h3, .dxWarningDialog h3, .dxSuccessDialog h3 {
+    padding-left: 22px;
+}
+
+.dxInfoDialog, .dxErrorDialog, .dxWarningDialog, .dxSuccessDialog {
+    width: 600px;
+    margin-left: -300px;
+}
+
+.dxDialogLockedFormContainer form {
+	display: block;
+}
+.dxDialogLockedFormContainer div.dxButtons {
+	position: absolute;	
+}
+.dxDialogContainerOpened {
+	position: absolute;
+	z-index: 5000;
+	top: 0px;
+	left: 0px;
+	display: block;
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+}
+.dxDialogContainerOpened .dxDialog {
+	display: block;
+}
+.dxDialogContainerOpened .dxDialogOverlay {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	opacity: 0.5;
+}
+div.dxDropdownMenu {
+	height: 30px;
+	min-height: 30px;
+	height: auto;
+	width: 100%;
+	border-bottom: 2px solid #ccc;
+	padding: 0 5px;
+}
+div.dxDropdownMenu ul {
+	background: #999;
+	line-height: 30px;
+	padding: 0 6px;
+	height: 30px;
+	min-height: 30px;
+	height: auto;
+	float: left;
+}
+div.dxDropdownMenu ul li ul {
+	float: none;
+	line-height: auto;
+	padding: 0;
+	height: auto;
+	display: none;
+	background: #999;
+	width: 180px;
+	position: absolute;
+}
+div.dxDropdownMenu ul li {
+	cursor: pointer;
+	float: left;
+	padding: 0 10px 0 0;
+	width: 100px;
+	width: auto;
+	position: relative;
+}
+div.dxDropdownMenu ul li a {
+	color: #fff;
+	padding: 6px 6px 6px 16px;
+	z-index:10;
+}
+div.dxDropdownMenu ul li span.arrow {
+	color: #fff;
+	font-size: 15px;
+	position: absolute;
+	right: 10px;
+}
+div.dxDropdownMenu ul li ul {
+	left: 0px;
+	top: 30px;
+}
+div.dxDropdownMenu ul li ul li {
+	float: none;
+	display: block;
+	padding: 0;
+}
+div.dxDropdownMenu ul li ul li.odd {
+	background: #aaa;
+}
+div.dxDropdownMenu ul li ul li.hover {
+	background: #ccc;
+}
+div.dxDropdownMenu ul li ul li a {
+	text-decoration: none;
+	padding: 7px 10px;
+	display: block;
+}
+div.dxDropdownMenu ul li ul li ul {
+	top: 0px;
+	left: 180px;
+}
+div.dxDropdownMenu ul li ul li ul li {
+	position: static;
+}
+div.dxContentMenu {
+	overflow: hidden;
+	float: left;
+	width: 200px;
+	padding: 0 0 10px;
+	cursor: pointer;
+	left: 0;
+	height: auto;
+}
+
+div.dxMainContent {
+	margin-left: 200px;
+}
+
+div.dxContentMenu ul {
+	float: left;
+	padding: 0.5em 0 0 0.5em;
+}
+
+div.dxContentMenu ul li {
+	clear: left;
+	height: 32px;
+	line-height: 32px;
+}
+
+div.dxContentMenu ul li a {
+	display: block;
+	height: 32px;
+	overflow: hidden;
+	padding: 0;
+	padding-left: 36px;
+	background: transparent none no-repeat 3px 6px;
+}
+
+div.dxContentMenu ul li a:hover {
+}
+
+div.dxContentMenu ul li.folder ul {
+	display: none;
+}
+
+div.dxContentMenu ul li.openedFolder ul {
+	width: 100%;
+	font-size: 90%;
+	list-style: none;
+	display: block;
+	height: auto;
+}
+
+div.dxContentMenu div.close {
+	width: 12px;
+	overflow: hidden;
+	margin: 0 0 0 188px;
+	padding: 0;
+	border: none;
+}
+
+div.dxContentMenu div.close input {
+	cursor: pointer;
+	padding: 0;
+	border: 0;
+	font-size: 11px;
+	color: #888;
+	margin: 0;
+	width: 10px;
+}
+
+div.dxCollapsedContentMenu {
+	width: 60px;
+}
+
+div.dxCollapsedContentMenu ul {
+	overflow: hidden;
+	width: 36px;
+}
+
+div.dxCollapsedContentMenu ul li {
+	height: 32px;
+}
+
+div.dxCollapsedContentMenu ul li.openedFolder {
+    height: auto;
+}
+
+div.dxCollapsedContentMenu div.close { 
+	margin: 0 0 0 48px;
+}
+
+div#main div.dxExpandedContent {
+	margin-left: 60px;	
+}table.dxResultTable {
+	margin: 5px 0;
+	border: 1px solid #ccc;
+	width: 100%;
+}
+
+table.dxResultTable thead th {
+	vertical-align: top;
+	padding: 8px;
+	border-left: 1px solid #ccc;
+	text-align: left;
+}
+
+table.dxResultTable tbody td {
+	empty-cells: show;
+	padding: 5px;
+	border-left: 1px solid #eee;
+}
+
+table.dxResultTable tbody tr.odd td {
+	background: #efefef;
+}
+
+table.dxResultTable tbody tr.even td {
+	background: #fff;
+}
+
+table.dxResultTable th.dxSelect {
+	width: 10px;
+}
+
+table.dxPaginatedResultTable tbody tr {
+	display: none;
+}
+
+div.dxPaginationLinks {
+	text-align: center;
+}
+
+div.dxPaginationLinks a {
+	cursor: pointer;
+	color: #669999;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 0 8px;
+}
+
+div.dxPaginationLinks a.disabled {
+	color: #bbb;
+}
+
+div.dxPaginationLinks a.selected {
+	background: #699;
+	color: #fff;
+}div.dxTabs ul.dxTabsList li {
+	float:left;
+}
+div.dxTabs ul.dxTabsList li a {
+	float:left;
+	color: #999;
+	padding: 0.5em 1em;
+	border: 1px solid #DDD;
+	background: #EFEFEF;
+	margin:0 5px -1px 0;
+	font-size: 14px;
+	line-height: 20px;
+}
+div.dxTabs ul.dxTabsList li.active a {
+	color: #333;
+	background-color:#FFF;
+	font-weight:bold;
+	border-bottom:1px solid #FFF;
+}
+div.dxTabs ul.dxTabsList li.active a:hover {
+	text-decoration: underline;
+}
+div.dxTabs div.dxTabContent {
+	border: 1px solid #ddd;
+	padding:1em;
+	min-height:500px;
+	height:auto !important;
+	height:700px;
+	clear:left;
+}
+div.dxTooglePanel {
+    margin-top: 5px;
+}
+
+div.dxTooglePanel .dxTitle, div.dxTooglePanel h3 {
+    cursor: pointer;
+    background: #666;
+    color: #fff;
+}
+
+div.dxTooglePanel .dxContent {
+    border: 1px solid #ddd;
+}.dxPickList ul li {
+	float: left;
+	clear: none;
+}
+
+.dxPickList ul li input {
+	padding: 2px 0pt 2px 20px;
+	width: 20px;
+	font-size: 9px;
+	display: block;
+	margin: 5px 10px;
+	color: #696969;
+	text-indent: -9999px;
+	background-position: center;
+	outline: 0;
+}
+
+.dxPickList ul li select {
+	height: 125px;
+	width: 200px;
+}
+
+.dxPickList ul li label {
+	float: none;
+	width: auto;
+	display: block;
+	text-align: left;
+}
+
+.dxPickList .dxSelectClone {
+	display: none;
+}
+
+.dxPickList .dxPickListOrder {
+	overflow: hidden;
+}
+
+.dxPickList .dxPickListOrder label,.dxPickList .dxPickListOrder input {
+	float: left;
+}
+
+.dxPickList .dxPickListOrder label {
+	width: 130px;
+	line-height: 32px;
+}
+
+.dxPickList .dxPickListOrder input {
+	margin: 8px 0 0 10px;
+}
+
+.dxPickList .dxPickListUpDown {
+	padding-top: 65px;
+	width: 71px;
+}
+
+.dxPickList .dxButtonsCopy {
+	margin-top: 40px;
+}form fieldset.dxFormHintFieldset {
+    width: 65%;
+}
+form .dxFormHint {
+    width: 24%;
+    display: block !important;
+}/* using jQuery AutoComplete plugin. */
+
+/* [jQuery AutoComplete Plugin CSS] */
+.ac_results {
+    padding: 0px;
+    border: 1px solid #333;
+    background-color: white;
+    overflow: hidden;
+    z-index: 99999;
+}
+
+.ac_results ul {
+    width: 100%;
+    list-style-position: outside;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ac_results li {
+    margin: 0px;
+    padding: 2px 5px;
+    cursor: default;
+    display: block;
+    /* 
+    if width will be 100% horizontal scrollbar will apear 
+    when scroll mode will be used
+    */
+    /*width: 100%;*/
+    font: menu;
+    font-size: 12px;
+    /* 
+    it is very important, if line-height not setted or setted 
+    in relative units scroll will be broken in firefox
+    */
+    line-height: 16px;
+    overflow: hidden;
+}
+
+.ac_loading {
+    background: white url('indicator.gif') right center no-repeat;
+}
+
+.ac_odd {
+    background-color: #eee;
+}
+
+.ac_over, .ac_over strong {
+    background-color: #699;
+    color: white;
+}
+.ac_results strong {
+	font-weight: bold;
+}
+/* [/jQuery AutoComplete Plugin CSS] */

@@ -1,0 +1,53 @@
+@import url("css/reset.css");
+@import url("css/art.css");
+@import url("css/layout.css");
+@import url("css/components/dxButtons.css");
+@import url("css/components/dxForms.css");
+body {
+	background:#ccc;
+}
+div#wrap.loginPage {
+	width:400px;
+	margin:20px auto;
+	min-width:400px;
+	min-height:0;
+}
+div#wrap div#content {
+	padding: 0.5em 2em;
+}
+div#wrap form fieldset ul {
+	float: none;
+}
+div#wrap form fieldset ul li label {
+	display: block;
+	float: none;
+	width: auto;
+}
+div#wrap form fieldset ul li input {
+	width: 100%;
+	padding: 3px;
+}
+div#header h1 {
+	text-indent:-9999px;
+	margin:7px auto 0 auto;
+	height:99px;
+	background-position:center;
+}
+div#main div#content {
+	width:auto;
+}
+ul#messageBoard {
+	overflow: hidden;
+	display:block;
+}
+ul.messages li {
+	padding: 5px 10px 5px 30px;
+}
+ul.messages li.info {
+	border-top:1px solid #B0D9FF;
+}
+ul.messages li.error {
+	border-top:1px solid #FFAAAA;
+}
+
+div#main div#content h1 { margin:-10px -22px 10px; }

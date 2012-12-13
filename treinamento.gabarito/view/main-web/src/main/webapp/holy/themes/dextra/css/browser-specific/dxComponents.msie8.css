@@ -1,0 +1,7 @@
+.dxDialogContainerOpened {
+	height: expression(document.body.scrollHeight + "px");
+}
+
+.dxDialogContainerOpened .dxDialogOverlay {
+	-ms-filter: "alpha(opacity=70)";
+}

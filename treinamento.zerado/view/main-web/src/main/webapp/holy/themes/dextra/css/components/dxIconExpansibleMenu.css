@@ -1,0 +1,54 @@
+div.dxContentMenu {
+	border-right: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+    background: #eee;
+	margin: 0;
+	padding: 0 ;
+	position:absolute;
+	left:0;
+	top:0;
+	height:100%;
+	display:block;
+}
+
+div.dxContentMenu ul {
+	font-size: 13px;
+}
+
+div.dxContentMenu ul li a {
+	color: #333;
+	background: transparent none no-repeat 7px 6px;
+}
+
+div.dxContentMenu ul li a:hover {
+	color: #999;
+}
+
+div.dxContentMenu div.close {
+	position: absolute;
+	right:5px;
+	top:5px;
+}
+
+div.dxCollapsedContentMenu div.close,
+div.dxContentMenu div.close {
+	margin:0;
+	padding:0;
+	height:8px;
+	width:4px;
+	display:block;
+	background: url(../../images/collapse-expand.gif) 100% 100% no-repeat;
+}
+
+div.dxContentMenu div.close input,
+div.dxCollapsedContentMenu div.close input {
+	display:none;
+}
+
+div.dxContentMenu ul li.start a {
+	background-image: url(../images/dextra/menu-home.png);
+}
+
+div.dxCollapsedContentMenu div.close  {
+	background: url(../../images/collapse-expand.gif) 0 0 no-repeat;
+}

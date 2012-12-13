@@ -1,0 +1,7 @@
+@import url("css/reset.css");
+@import url("css/layout.css");
+@import url("css/art.css");
+@import url("css/components/dxButtons.css");
+@import url("css/components/dxForms.css");
+
+div#header h1 { margin:0 auto; background:url(images/livedemo-logo.png) center center no-repeat; height:99px; }

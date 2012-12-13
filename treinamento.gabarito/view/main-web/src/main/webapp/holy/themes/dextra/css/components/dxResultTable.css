@@ -1,0 +1,124 @@
+table.dxResultTable thead th {
+	border-left: 1px solid #cddddc;
+	font-weight: bold;
+	font-size: 14px;
+	background: #699;
+	color: #fff;
+}
+
+table.dxResultTable tbody td {
+	font-size: 13px;
+}
+
+table.dxResultTable tbody tr.dxOdd td {
+	background: #efefef;
+}
+
+table.dxResultTable tbody tr.dxSelectedRow td {
+	background: #ffefbb;
+}
+
+table.dxResultTable tbody tr.dxOdd.dxSelectedRow td {
+	background: #ffeeaa;
+}
+
+table.dxPaginatedResultTable tbody tr {
+	display: none;
+}
+
+table.dxPaginatedResultTable tbody tr.dxView {
+	display: table-row;
+}
+
+table.dxPaginatedResultTable tbody tr.dxSelectAll {
+	display: table-row;
+	background: #dff;
+}
+
+table.dxPaginatedResultTable tbody tr.dxSelectAll td {
+	font-size: 12px;
+	color: #777;
+}
+
+div.dxPaginationLinks {
+	text-align: center;
+}
+
+div.dxPaginationLinks a {
+	cursor: pointer;
+	color: #669999;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 0 8px;
+}
+
+div.dxPaginationLinks a.disabled {
+	color: #bbb;
+}
+
+div.dxPaginationLinks a.selected {
+	background: #699;
+	color: #fff;
+}
+
+table.dxResultTable td.actions {
+	vertical-align: bottom;
+	width: 150px;
+}
+
+table.dxResultTable td.actions a {
+	cursor: pointer;
+	margin: 0;
+	border: none;
+	padding: 20px 0px 0px;
+	font-size: 10px;
+	line-height: 1em;
+	font-weight: bold;
+	background: transparent none no-repeat top center;
+	float: left;
+	width: 50px;
+	text-align: center;
+}
+
+table.dxResultTable td.actions a:hover {
+	color: #000;
+}
+
+table.dxResultTable td.actions a.edit {
+	background-image: url(../../images/actions/edit.png);
+}
+
+table.dxResultTable td.actions a.remove {
+	background-image: url(../../images/actions/remove.png);
+}
+
+table.dxResultTable td.actions a.view {
+	background-image: url(../../images/actions/view.png);
+}
+table.dxResultTable th.dxHeaderSortable {
+    background-position: right center;
+    background-repeat: no-repeat; 
+    background-image: url(../../images/bg.gif); 
+    cursor: pointer;
+}
+table.dxResultTable th.dxHeaderSortUp { 
+    background-image: url(../../images/asc.gif);
+}
+
+table.dxResultTable th.dxHeaderSortDown {
+    background-image: url(../../images/desc.gif); 
+}
+
+div.dxPaginationLinks input {
+    text-align: center;
+    width: 50px;
+    border: none;
+}
+
+table.jquery_columnSizing {
+    table-layout: fixed;
+    width : 100%; 
+}
+table.jquery_columnSizing tr td {
+    overflow : hidden;
+}

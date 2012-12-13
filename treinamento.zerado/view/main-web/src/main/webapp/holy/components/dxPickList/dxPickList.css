@@ -1,0 +1,58 @@
+.dxPickList ul li {
+	float: left;
+	clear: none;
+}
+
+.dxPickList ul li input {
+	padding: 2px 0pt 2px 20px;
+	width: 20px;
+	font-size: 9px;
+	display: block;
+	margin: 5px 10px;
+	color: #696969;
+	text-indent: -9999px;
+	background-position: center;
+	outline: 0;
+}
+
+.dxPickList ul li select {
+	height: 125px;
+	width: 200px;
+}
+
+.dxPickList ul li label {
+	float: none;
+	width: auto;
+	display: block;
+	text-align: left;
+}
+
+.dxPickList .dxSelectClone {
+	display: none;
+}
+
+.dxPickList .dxPickListOrder {
+	overflow: hidden;
+}
+
+.dxPickList .dxPickListOrder label,.dxPickList .dxPickListOrder input {
+	float: left;
+}
+
+.dxPickList .dxPickListOrder label {
+	width: 130px;
+	line-height: 32px;
+}
+
+.dxPickList .dxPickListOrder input {
+	margin: 8px 0 0 10px;
+}
+
+.dxPickList .dxPickListUpDown {
+	padding-top: 65px;
+	width: 71px;
+}
+
+.dxPickList .dxButtonsCopy {
+	margin-top: 40px;
+}

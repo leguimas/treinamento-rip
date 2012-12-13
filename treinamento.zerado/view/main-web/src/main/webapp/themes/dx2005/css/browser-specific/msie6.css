@@ -1,0 +1,46 @@
+div#wrap {
+	/* min-width and max-width fix */
+	width: expression(document.body.clientWidth < 762? "760px" : document.body.clientWidth > 1202? "1200px" : "auto");
+	/* min-height and max-height fix */
+ 	height: expression( this.scrollHeight < 851 ? "850px" : "auto" );
+	border:1px solid #EEE;
+	border-bottom:none;
+	border-top:none;
+}
+div#main div#content h1 a {
+	margin:0 5px 0 0;
+}
+div#main div#content {
+	width:98%;
+}
+div.dxTabs ul.dxTabsList {
+	margin:0 0 -1px 0;
+}
+.holyLoading,
+.holyLoadingInternal {
+	position: absolute;
+}
+.holyLoading {
+ height: expression(document.body.offsetHeight)px;
+}
+.holyLoadingInternal {
+	top: 250px;
+}
+ul.dxAppMenu li a {
+	zoom: 1;
+}
+.holyLoadingInternal p {
+	padding-top: 22px;
+}
+table.dxResultTable thead tr {
+	background:#EEE;
+}
+table.dxResultTable thead tr .dxHeaderSortDown {
+	background:#EEE url(../../images/arrow-dow.gif) 98% 50% no-repeat;
+}
+table.dxResultTable thead tr .dxHeaderSortUp {
+	background:#EEE url(../../images/arrow-up.gif) 98% 50% no-repeat;
+}
+div.dxDropdownMenu ul li, div.dxDropdownMenu ul li a {
+	z-index: 100;	
+}

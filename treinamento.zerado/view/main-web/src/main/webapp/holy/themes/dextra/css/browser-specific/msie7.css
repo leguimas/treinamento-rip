@@ -1,0 +1,23 @@
+#wrap {
+	height: auto;
+}
+
+iframe.jqm {
+    position:absolute;top:0;left:0;z-index:-1;
+	width: expression(this.parentNode.offsetWidth+'px');
+	height: expression(this.parentNode.offsetHeight+'px');
+}
+
+html .dxDialog {
+     position: absolute;
+     top: expression((document.documentElement.scrollTop || document.body.scrollTop) + Math.round(17 * (document.documentElement.offsetHeight || document.body.clientHeight) / 100) + 'px');
+}
+
+/* [holyLoading] */
+.holyLoadingInternal p {
+    margin-top: 42px;   
+}
+input#hideContentMenu{
+    position: absolute;
+    top: 120px;
+}

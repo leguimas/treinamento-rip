@@ -1,0 +1,370 @@
+form {
+    margin: 0;
+    padding: 0;
+}
+
+form fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 13px;
+}
+
+form fieldset legend {
+    display: none;
+}
+
+form fieldset ul {
+    padding: 0;
+    margin: 0;
+}
+
+form fieldset ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    clear: left;
+    line-height: 32px;
+}
+
+form fieldset ul li li {
+    line-height: normal;
+}
+
+fieldset ul li label {
+    float: left;
+    width: 200px;
+    padding: 0;
+    text-align: right;
+    margin: 0 6px 0 0;
+    vertical-align: middle;
+}
+
+fieldset ul li.required label {
+    font-weight: bold;
+}
+
+form fieldset ul li input, form fieldset ul li select, form fieldset ul li textarea {
+    font-size: 14px;
+    margin: 0;
+    vertical-align: middle;
+}
+
+form fieldset ul li input, form fieldset ul li select {
+    display: inline;
+    float: none;
+    border: 1px solid #ddd;
+    border-color: #aaa #ddd #ddd #aaa;
+    background: #f7fffc;
+}
+
+form fieldset ul li textarea {
+    border: 1px solid #ccc;
+    font-family: Trebuchet MS, Arial, Helvetica, sans-serif;
+    width: 250px;
+    height: 100px;
+    padding: 0.15em;
+    background-color: #f7fffC;
+    border-color: #aaa #ddd #ddd #aaa;
+}
+
+fieldset ul li input {
+    padding: 3px;
+}
+
+fieldset ul li select {
+    height: 24px;
+    vertical-align: middle;
+    width: 200px;
+}
+
+fieldset ul li select option {
+    padding: 3px;
+}
+
+form fieldset ul li .focus {
+    border-color: #666 #999 #999 #666;
+    background-color: #f4f4f4;
+    color: #000;
+}
+
+form fieldset ul li.check input {
+    width: 11px;
+    height: 11px;
+    margin-top: 3px;
+    float: left;
+    margin-left: 190px;
+}
+
+form fieldset ul li input[disabled] {
+    background-color: #f4f4f4;
+}
+
+form fieldset ul li input[type = hidden], form fieldset ul li input.hidden, form fieldset ul li.check input.dxCheckboxHelper {
+    display: none;
+}
+
+form .dxButtons {
+    border-top: 1px solid #ddd;
+    padding-top: 5px;
+    clear: right;
+}
+
+form fieldset ul li.required ul li label {
+    font-weight: normal;
+}
+
+form fieldset ul li.required ul li.required label {
+    font-weight: bold;
+}
+
+form fieldset ul li ul li.check input {
+    margin-left: 0;
+    width: 22px;
+    height: 22px;
+}
+
+form fieldset ul li.check label {
+    width: auto !important;
+    float: none;
+    line-height: 21px;
+    vertical-align: top;
+    margin-left: 3px;
+}
+
+form fieldset ul li.multipleCheck li.check label {
+    line-height: 32px;
+    vertical-align: middle;
+    margin-left: 0px;
+}
+
+form fieldset ul li.multiple ul, form fieldset ul li.multipleCheck ul {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+form fieldset ul li.multipleCheck label {
+    margin-top: 3px;
+}
+
+form fieldset ul li.multiple fieldset label, form fieldset ul li.multiple fieldset input, form fieldset ul li.multipleCheck fieldset label, form fieldset ul li.multipleCheck fieldset input {
+    float: none;
+    display: inline;
+    margin: 0;
+    width: 10px;
+}
+
+form fieldset ul li.multiple fieldset, form fieldset ul li.multipleCheck fieldset {
+    clear: none;
+    float: none;
+    margin: 0;
+    display: inline;
+}
+
+form fieldset ul li.multiple fieldset ul, form fieldset ul li.multipleCheck fieldset ul {
+    padding: 0;
+}
+
+form fieldset ul li.multiple fieldset ul li label, form fieldset ul li.multipleCheck fieldset ul li label {
+    width: auto;
+}
+
+form fieldset ul li.multipleCheck fieldset ul li, form fieldset ul li.multiple fieldset ul li {
+    white-space: none;
+    width: 10px;
+    margin-right: 14px;
+    float: none;
+    display: inline;
+    white-space: nowrap;
+}
+
+fieldset ul li ul li label {
+    width: 70px;
+    margin-top: 8px;
+}
+
+fieldset ul li.required label .dxRequiredMark {
+    color: #CC0000;
+}
+
+fieldset ul li input.float, fieldset ul li input.numeric {
+    text-align: right;
+}
+
+form fieldset ul li .emphasize {
+    display: inline;
+    color: #666;
+    padding: 0.1em 0;
+}
+
+/* [dxFormHint] */
+form fieldset ul li .dxHint {
+    display: none;
+    position: absolute;
+    right: 1px;
+    padding: 3px;
+    width: 200px;
+    min-width: 150px;
+    max-width: 200px;
+    z-index: 1;
+    width: auto;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    opacity: 0.85;
+    font-size: 11px;
+}
+
+/* fixes fields length when inside a dxDialog */
+div.dxDialog form ul li label {
+    width: 160px;
+}
+
+div.dxDialog form ul li input {
+    width: 200px;
+}
+
+div.dxDialog form ul li.check input {
+    margin-left: 150px;
+}
+
+div.dxDialog form ul li.multipleCheck li.check input {
+    margin: 0;
+}
+
+/* other form style */
+form.dxFormFluid fieldset {
+    margin: 0;
+    padding: 0;
+}
+
+form.dxFormFluid fieldset ul li label {
+    float: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+    width: auto;
+    text-align: left;
+}
+
+form.dxFormFluid fieldset ul li {
+    display:inline-block;
+	float:left;
+	clear:none;
+    padding: 0 10px;
+    z-index: 1;
+    height: 50px;
+}
+
+form.dxFormFluid fieldset ul li input, form.dxFormFluid fieldset ul li select, form.dxFormFluid fieldset ul li textarea {
+    margin: 3px 3px 3px 0;
+    width: auto;
+}
+
+form.dxFormFluid fieldset ul li.check {
+    display: inline;
+    margin-top: 14px;
+}
+
+form.dxFormFluid fieldset ul li.check label {
+    display: inline;
+}
+
+form.dxFormFluid fieldset ul li.check input {
+    float: none;
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+    width: auto;
+    text-align: left;
+}
+
+/* [dxFilter] */
+fieldset.dxFilter {
+    padding: 0px;
+}
+
+fieldset.dxFilter .dxButtons {
+    border: none;
+}
+
+form fieldset ul li.dxEmptyRequired label {
+	 color: #900;
+}
+form fieldset ul li.dxEmptyRequired li label {
+    color: #333;	
+}
+
+form fieldset ul li.dxEmptyRequired input,
+form fieldset ul li.dxEmptyRequired select,
+form fieldset ul li.dxEmptyRequired textarea {
+    border-color: #c00;	
+}
+
+/* [dxDatePicker] */
+.ui-datepicker .ui-datepicker-title {
+    margin: 0pt 2.3em;
+}
+
+.ui-datepicker .ui-datepicker-title select.ui-datepicker-year {
+    width: 5em;
+    margin: 0 0 0 40px;
+    position: absolute;    
+}
+div#ui-datepicker-div{
+    z-index:10000;
+}
+.ui-datepicker .ui-datepicker-title {
+    text-align: left;    
+    position: relative; 
+}
+.ui-datepicker-trigger{
+     vertical-align: middle;
+     padding: 0 0 0 10px;   
+}
+
+
+
+
+
+
+
+
+form.dxFormFluid fieldset.dxPickList {
+    margin-top: 6px;	
+}
+
+form.dxFormFluid fieldset.dxPickList ul li {
+    height: 165px;
+    padding: 0 10px; 
+}
+
+form.dxFormFluid fieldset.dxPickList ul li label,
+form.dxFormFluid fieldset.dxPickList ul li input, 
+form.dxFormFluid fieldset.dxPickList ul li select, 
+form.dxFormFluid fieldset.dxPickList ul li textarea {
+    float: none;
+    clear: none;
+}
+form.dxFormFluid fieldset.dxPickList .dxPickListOrder label,
+form.dxFormFluid fieldset.dxPickList .dxPickListOrder input {
+    float: left;
+}
+
+form.dxFormFluid fieldset.dxPickList .dxPickListOrder label {
+    line-height: 22px;
+}
+
+form.dxFormFluid fieldset.dxPickList .dxPickListOrder input {
+    margin-top: 0;  
+}
+
+form.dxFormFluid fieldset.dxPickList ul li select {
+    width: 200px;
+}
+
+form.dxFormFluid fieldset.dxPickList ul li input {
+	width: 95px;
+}

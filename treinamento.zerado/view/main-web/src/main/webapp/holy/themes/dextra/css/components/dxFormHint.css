@@ -1,0 +1,25 @@
+form .dxFormHint .dxHint {
+	color: #666;
+	padding: 0.1em 0;
+	display: block;
+}
+
+form .dxFormHint {
+	float: right;
+	width: 20em;
+	padding: 1em;
+	margin: 1em;
+	border: 2px solid #e4e4e4;
+	background: #f7f7f7 url(../../images/form-hint-bg.png) no-repeat scroll 6px 4px;
+	color: #666666;
+}
+
+form .dxFormHint h3 {
+	border-bottom: 1px solid #699;
+	margin: 0 0 1em 1.9em;
+	padding: 0 0 0.25em 1em;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: right;
+	color: #699;
+}
